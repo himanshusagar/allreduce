@@ -36,7 +36,7 @@ class RecursiveAllReduce:
     def main(self):
         for level in range(4):
             partner_rank = partner_index(level, self.my_rank)
-            if(shouldSendFirst(self.my_rank)):
+            if(shouldSendFirst( level , self.my_rank)):
                 self.sendTensors(partner_rank)
                 self.recvTensors(level)
             else:
