@@ -6,9 +6,9 @@
 
 parallel-ssh -i -h ~/followers "cd dev && cd allreduce && git pull"
 
-##python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0 &
+python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0 &
 
-for i in `seq 0 15`
+for i in `seq 1 15`
 do
         RANK=$i
         echo "Staring rank $RANK"
