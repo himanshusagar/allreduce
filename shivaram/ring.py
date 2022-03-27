@@ -21,7 +21,8 @@ def main():
     # indices to send and receive from
     me = dist.get_rank()
     world_size = dist.get_world_size()
-    comm_size = TENSOR_SIZE/world_size
+    print(world_size)
+    comm_size = int(TENSOR_SIZE/world_size)
 
     prev = me-1
     if(prev < 0):
@@ -34,8 +35,8 @@ def main():
     for i in range(0, world_size):
         send_buf = torch.zeros(comm_size)
         for idx in range(0,comm_size):
-            t_send[idx]=t[curi*comm_size + idx]
-        dist.send(t_send, dst=_next_)
+            send_buf[idx]=t[curi*comm_size + idx]
+        dist.send(send_buf, dst=_next_)
 
         recv_buf = torch.zeros(comm_size)
         dist.recv(recv_buf, src=prev)
