@@ -42,6 +42,9 @@ def perform_op_tensor(wholeTensor, rank, section_tensor):
     return wholeTensor;
 
 
+def shouldSendFirst(my_rank):
+    return my_rank < partner_index(my_rank)
+
 if __name__ == '__main__':
     globalTensor = torch.zeros(TENSOR_SIZE)
 
