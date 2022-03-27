@@ -27,6 +27,8 @@ commDict = [
 ]
 
 def partner_index(level, rank):
+    level = int(level)
+    rank = int(rank)
     return commDict[level][rank]
 
 def section_tensor(wholeTensor, rank):
