@@ -25,7 +25,7 @@ class RecursiveAllReduce:
         dist.send(my_section_tensor, dst=partner_rank)
 
     def recvTensors(self, level):
-        partner_rank = partner_index(level , rank)
+        partner_rank = partner_index(level , self.my_rank)
         partner_section_tensor = torch.zeros(SECTION_SIZE)
         s = time.time()
         dist.recv(partner_section_tensor, src=partner_rank)
