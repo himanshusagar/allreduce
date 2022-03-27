@@ -30,8 +30,9 @@ def partner_index(level, rank):
     return commDict[level][rank]
 
 def section_tensor(wholeTensor, rank):
-    index = rank * SECTION_SIZE;
-    return wholeTensor[index : index + SECTION_SIZE];
+    begin = rank * SECTION_SIZE;
+    end = begin + SECTION_SIZE - 1;
+    return wholeTensor[begin : end];
 
 def perform_op_tensor(wholeTensor, rank, section_tensor):
     index = rank * SECTION_SIZE
