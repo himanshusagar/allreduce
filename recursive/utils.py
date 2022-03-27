@@ -2,7 +2,7 @@ import torch
 
 TENSOR_SIZE = 16
 WORLD_SIZE = 16
-SECTION_SIZE =  TENSOR_SIZE / WORLD_SIZE # 64
+SECTION_SIZE =  int( TENSOR_SIZE / WORLD_SIZE ) # 64
 
 
 commDict = [
@@ -30,8 +30,8 @@ def partner_index(level, rank):
     return commDict[level][rank]
 
 def section_tensor(wholeTensor, rank):
-    begin = rank * SECTION_SIZE;
-    end = begin + SECTION_SIZE - 1;
+    begin = int(rank * SECTION_SIZE);
+    end = int(begin + SECTION_SIZE);
     return wholeTensor[begin : end];
 
 def perform_op_tensor(wholeTensor, rank, section_tensor):
@@ -43,7 +43,10 @@ def perform_op_tensor(wholeTensor, rank, section_tensor):
 
 
 if __name__ == '__main__':
-    globalTensor = torch.rand(TENSOR_SIZE)
+    globalTensor = torch.zeros(TENSOR_SIZE)
+
+    for i in range(TENSOR_SIZE):
+        globalTensor[i] = i;
 
     print("Global Tensor")
     print(globalTensor)
@@ -52,6 +55,7 @@ if __name__ == '__main__':
     print(section_tensor(globalTensor , rank))
 
     partner_section = section_tensor(globalTensor, 3);
-
-    globalTensor = perform_op_tensor(globalTensor , rank , partner_section);
+    print("partner_section Tensor")
+    print(partner_section)
+    globalTensor = perform_op_tensor(globalTensor , 3 , partner_section);
     print("globalTensor" , globalTensor);
