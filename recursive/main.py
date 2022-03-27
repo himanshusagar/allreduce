@@ -3,7 +3,7 @@ import torch
 import logging
 import time
 from torch import distributed as dist
-from recursive.utils import *
+from utils import *
 
 SEND_OK = True
 RECV_OK = True
