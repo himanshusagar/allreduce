@@ -31,7 +31,7 @@ class RecursiveAllReduce:
         dist.recv(partner_section_tensor, src=partner_rank)
         e = time.time()
         self.globalTensor = perform_op_tensor(self.globalTensor, partner_rank, partner_section_tensor)
-        print("Finished send recv from ", partner_rank, " at level", level, "in ", e - s, " seconds ", globalTensor)
+        print("Finished send recv from ", partner_rank, " at level", level, "in ", e - s, " seconds ", self.globalTensor)
 
     def main(self):
         for level in range(4):
