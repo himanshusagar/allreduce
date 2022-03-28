@@ -44,9 +44,9 @@ class RecursiveAllReduce:
 
         if (self.my_rank <= mid):
             self.sendTensors(partner_rank , mid + 1  , right)
-            self.recvTensors(left , mid)
+            self.recvTensors(partner_rank , left , mid)
         else:
-            self.recvTensors(left , mid)
+            self.recvTensors(partner_rank , left , mid)
             self.sendTensors(partner_rank , mid + 1 , right)
 
         if(self.my_rank <= mid):
