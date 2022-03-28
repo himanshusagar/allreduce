@@ -99,9 +99,9 @@ if __name__ == "__main__":
                  rank=args.rank,
                  world_size=args.num_nodes)
     rec.reduce_scatter( 0 , 15)
-    print("End Tensor after reduce_scatter", rec.my_rank, rec.globalTensor)
-    rec.clearNonPortion();
+    rec.clearNonPortion()
+    backup = torch.clone(rec.globalTensor)
     rec.all_gather(0, 15)
-    print("End Tensor after all_gather", rec.my_rank, rec.globalTensor)
+    print("End Tensor " , rec.my_rank," after reduce_scatter" , backup , " and all_gather ",  rec.globalTensor)
 
 
