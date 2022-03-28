@@ -31,7 +31,7 @@ class RecursiveAllReduce:
         begin = self.my_rank * SECTION_SIZE
         end = begin + SECTION_SIZE - 1
         for i in range(TENSOR_SIZE):
-            if(i < begin and end > i):
+            if(i < begin or end > i):
                 self.globalTensor[i] = 0
 
     def sendTensors(self , partner_rank, begin , end):
