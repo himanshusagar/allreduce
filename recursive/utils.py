@@ -47,7 +47,16 @@ def perform_op_tensor(wholeTensor, begin , end , section_tensor):
         index += 1
     return wholeTensor;
 
-
+def clearNonPortion(rank , opTensor):
+    begin = rank * SECTION_SIZE
+    end = begin + SECTION_SIZE - 1
+    print("begin and end " ,  begin , end)
+    for i in range(TENSOR_SIZE):
+        if(begin <= i and i <= end ):
+            opTensor[i] = opTensor[i]
+        else:
+            opTensor[i] = 0
+    return opTensor
 
 if __name__ == '__main__':
     globalTensor = torch.zeros(TENSOR_SIZE)
@@ -66,4 +75,8 @@ if __name__ == '__main__':
     print("partner_section Tensor")
     print(partner_section)
     globalTensor = perform_op_tensor(globalTensor , begin , end , partner_section);
+    print("globalTensor" , globalTensor);
+
+    globalTensor = clearNonPortion(5 , globalTensor)
+
     print("globalTensor" , globalTensor);
