@@ -38,7 +38,7 @@ def partner_index(rank , mid , size):
     # return commDict[level][rank]
 
 def section_tensor(wholeTensor, begin , end):
-    return wholeTensor[begin : end];
+    return wholeTensor[begin : end + 1];
 
 def perform_op_tensor(wholeTensor, begin , end , section_tensor):
     index = begin
@@ -48,8 +48,6 @@ def perform_op_tensor(wholeTensor, begin , end , section_tensor):
     return wholeTensor;
 
 
-def shouldSendFirst( level , my_rank):
-    return my_rank < partner_index(level , my_rank)
 
 if __name__ == '__main__':
     globalTensor = torch.zeros(TENSOR_SIZE)
@@ -60,11 +58,12 @@ if __name__ == '__main__':
     print("Global Tensor")
     print(globalTensor)
     rank = 2
-    print(partner_index(1 , rank))
-    print(section_tensor(globalTensor , rank , rank + 2))
+    print(partner_index(1 , rank , 5))
+    begin = 3;
+    end = 5;
 
-    partner_section = section_tensor(globalTensor, 5 , 15);
+    partner_section = section_tensor(globalTensor, begin , end)
     print("partner_section Tensor")
     print(partner_section)
-    globalTensor = perform_op_tensor(globalTensor , 5 , 15 , partner_section);
+    globalTensor = perform_op_tensor(globalTensor , begin , end , partner_section);
     print("globalTensor" , globalTensor);
