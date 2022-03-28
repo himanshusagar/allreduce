@@ -22,6 +22,7 @@ class RecursiveAllReduce:
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
         self.globalTensor[self.my_rank] = 1
+        print("Initial Tensor" , self.globalTensor);
 
     def sendTensors(self , partner_rank, begin , end):
         my_section_tensor = section_tensor(self.globalTensor, begin  , end)
