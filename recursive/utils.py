@@ -61,10 +61,10 @@ if __name__ == '__main__':
     print(globalTensor)
     rank = 2
     print(partner_index(1 , rank))
-    print(section_tensor(globalTensor , rank , rank))
+    print(section_tensor(globalTensor , rank , rank + 2))
 
-    partner_section = section_tensor(globalTensor, 3 , 3);
+    partner_section = section_tensor(globalTensor, 5 , 15);
     print("partner_section Tensor")
     print(partner_section)
-    globalTensor = perform_op_tensor(globalTensor , 3 , partner_section);
+    globalTensor = perform_op_tensor(globalTensor , 5 , 15 , partner_section);
     print("globalTensor" , globalTensor);
