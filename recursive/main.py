@@ -1,4 +1,6 @@
 import argparse
+from math import floor
+
 import torch
 import logging
 import time
@@ -20,28 +22,39 @@ class RecursiveAllReduce:
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
 
-    def sendTensors(self , partner_rank):
-        my_section_tensor = section_tensor(self.globalTensor, self.my_rank)
+    def sendTensors(self , partner_rank, begin , end):
+        my_section_tensor = section_tensor(self.globalTensor, begin  , end)
         dist.send(my_section_tensor, dst=partner_rank)
 
-    def recvTensors(self, level):
-        partner_rank = partner_index(level , self.my_rank)
-        partner_section_tensor = torch.zeros(SECTION_SIZE)
+    def recvTensors(self, partner_rank, begin , end):
+        partner_size = end - begin + 1
+        partner_section_tensor = torch.zeros(partner_size)
         s = time.time()
         dist.recv(partner_section_tensor, src=partner_rank)
         e = time.time()
-        self.globalTensor = perform_op_tensor(self.globalTensor, partner_rank, partner_section_tensor)
-        print("Finished send recv from ", partner_rank, " at level", level, "in ", e - s, " seconds ", self.globalTensor)
+        self.globalTensor = perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor)
+        print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
 
-    def main(self):
-        for level in range(4):
-            partner_rank = partner_index(level, self.my_rank)
-            if(shouldSendFirst( level , self.my_rank)):
-                self.sendTensors(partner_rank)
-                self.recvTensors(level)
-            else:
-                self.recvTensors(level)
-                self.sendTensors(partner_rank)
+    def reduce_scatter(self , left,  right):
+        if(left >= right):
+            return
+        size = right - left + 1
+        mid  = floor( (left + right)/2 )
+        partner_rank = partner_index(self.my_rank , mid , size)
+
+        if (self.my_rank <= mid):
+            self.sendTensors(partner_rank , mid + 1  , right)
+            self.recvTensors(left , mid)
+        else:
+            self.recvTensors(left , mid)
+            self.sendTensors(partner_rank , mid + 1 , right)
+
+        if(self.my_rank <= mid):
+            self.reduce_scatter(left , mid)
+        else:
+            self.reduce_scatter(mid + 1 , right)
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -54,4 +67,4 @@ if __name__ == "__main__":
     rec.init_process(master_ip=args.master_ip,
                  rank=args.rank,
                  world_size=args.num_nodes)
-    rec.main()
+    rec.reduce_scatter( 0 , 15)

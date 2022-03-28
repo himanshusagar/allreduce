@@ -1,3 +1,5 @@
+from math import floor
+
 import torch
 
 TENSOR_SIZE = 16
@@ -26,19 +28,21 @@ commDict = [
     }
 ]
 
-def partner_index(level, rank):
-    level = int(level)
-    rank = int(rank)
-    return commDict[level][rank]
+def partner_index(rank , mid , size):
+    if(rank <= mid):
+        return rank + floor(size / 2);
+    else:
+        return rank - floor(size / 2)
+    # level = int(level)
+    # rank = int(rank)
+    # return commDict[level][rank]
 
-def section_tensor(wholeTensor, rank):
-    begin = int(rank * SECTION_SIZE);
-    end = int(begin + SECTION_SIZE);
+def section_tensor(wholeTensor, begin , end):
     return wholeTensor[begin : end];
 
-def perform_op_tensor(wholeTensor, rank, section_tensor):
-    index = rank * SECTION_SIZE
-    for i in range(SECTION_SIZE):
+def perform_op_tensor(wholeTensor, begin , end , section_tensor):
+    index = begin
+    for i in range( end - begin + 1):
         wholeTensor[index] += section_tensor[i];
         index += 1
     return wholeTensor;
@@ -57,9 +61,9 @@ if __name__ == '__main__':
     print(globalTensor)
     rank = 2
     print(partner_index(1 , rank))
-    print(section_tensor(globalTensor , rank))
+    print(section_tensor(globalTensor , rank , rank))
 
-    partner_section = section_tensor(globalTensor, 3);
+    partner_section = section_tensor(globalTensor, 3 , 3);
     print("partner_section Tensor")
     print(partner_section)
     globalTensor = perform_op_tensor(globalTensor , 3 , partner_section);
