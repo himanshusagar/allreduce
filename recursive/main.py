@@ -22,7 +22,7 @@ class RecursiveAllReduce:
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
         self.globalTensor[self.my_rank] = 1
-        print("Initial Tensor " , self.my_rank , self.globalTensor);
+        print("Initial Tensor " , self.my_rank , self.globalTensor)
 
     def sendTensors(self , partner_rank, begin , end):
         my_section_tensor = section_tensor(self.globalTensor, begin  , end)
@@ -49,12 +49,31 @@ class RecursiveAllReduce:
             self.recvTensors(partner_rank , left , mid)
         else:
             self.recvTensors(partner_rank ,  mid + 1 , right)
-            self.sendTensors(partner_rank , left , mid);
+            self.sendTensors(partner_rank , left , mid)
 
         if(self.my_rank <= mid):
             self.reduce_scatter(left , mid)
         else:
             self.reduce_scatter(mid + 1 , right)
+
+    def all_gather(self , left, right):
+        if (left >= right):
+            return
+        size = right - left + 1
+        mid = floor((left + right) / 2)
+        partner_rank = partner_index(self.my_rank, mid, size)
+
+        if(self.my_rank <= mid):
+            self.all_gather(left , mid)
+        else:
+            self.all_gather(mid + 1 , right)
+
+        if(self.my_rank <= mid):
+            self.sendTensors(partner_rank, left, mid)
+            self.recvTensors(partner_rank, mid + 1, right)
+        else:
+            self.sendTensors(partner_rank , mid + 1  , right)
+            self.recvTensors(partner_rank, left , mid)
 
 
 if __name__ == "__main__":
@@ -69,4 +88,8 @@ if __name__ == "__main__":
                  rank=args.rank,
                  world_size=args.num_nodes)
     rec.reduce_scatter( 0 , 15)
-    print("End Tensor ", rec.my_rank, rec.globalTensor);
+    print("End Tensor after reduce_scatter", rec.my_rank, rec.globalTensor)
+    rec.all_gather(0, 15)
+    print("End Tensor after all_gather", rec.my_rank, rec.globalTensor)
+
+
