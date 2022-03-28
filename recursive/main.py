@@ -21,7 +21,10 @@ class RecursiveAllReduce:
                                 rank=rank,
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
-        self.globalTensor[self.my_rank] = 1
+        #self.globalTensor[self.my_rank] = 1
+        for i in range(TENSOR_SIZE):
+            globalTensor[i] = i;
+
         print("Initial Tensor " , self.my_rank , self.globalTensor)
 
     def sendTensors(self , partner_rank, begin , end):
