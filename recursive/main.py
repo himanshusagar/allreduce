@@ -23,7 +23,7 @@ class RecursiveAllReduce:
         self.my_rank = dist.get_rank()
         #self.globalTensor[self.my_rank] = 1
         for i in range(TENSOR_SIZE):
-            globalTensor[i] = i;
+            self.globalTensor[i] = i
 
         print("Initial Tensor " , self.my_rank , self.globalTensor)
 
