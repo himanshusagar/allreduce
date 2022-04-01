@@ -5,15 +5,15 @@ import torch
 import logging
 import time
 from torch import distributed as dist
-from utils import *
+from base import BaseClass
 
-SEND_OK = True
-RECV_OK = True
 DEBUG = False
 
-class RecursiveAllReduce:
-    def __init__(self):
-        self.globalTensor = torch.zeros(TENSOR_SIZE)
+class RecursiveAllReduce(BaseClass):
+    def __init__(self, tensor_size, world_size, master_ip , rank):
+        super().__init__(tensor_size, world_size)
+        self.globalTensor = torch.zeros(self.TENSOR_SIZE)
+        self.init_process(master_ip , rank, world_size);
 
     def init_process(self, master_ip, rank, world_size):
         dist.init_process_group(backend="gloo",
@@ -21,23 +21,22 @@ class RecursiveAllReduce:
                                 rank=rank,
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
-        #self.globalTensor[self.my_rank] = 1
-        for i in range(TENSOR_SIZE):
+        for i in range(self.TENSOR_SIZE):
             self.globalTensor[i] = i
-
-        print("Initial Tensor " , self.my_rank , self.globalTensor)
+        if(DEBUG):
+            print("Initial Tensor " , self.my_rank , self.globalTensor)
 
     def clearNonPortion(self):
-        begin = self.my_rank * SECTION_SIZE
-        end = begin + SECTION_SIZE - 1
-        for i in range(TENSOR_SIZE):
-            if (begin <= i and i <= end):
+        begin = self.my_rank * self.SECTION_SIZE
+        end = begin + self.SECTION_SIZE - 1
+        for i in range(self.TENSOR_SIZE):
+            if begin <= i <= end:
                 self.globalTensor[i] = self.globalTensor[i]
             else:
                 self.globalTensor[i] = 0
 
     def sendTensors(self , partner_rank, begin , end):
-        my_section_tensor = section_tensor(self.globalTensor, begin  , end)
+        my_section_tensor = self.section_tensor(self.globalTensor, begin  , end)
         dist.send(my_section_tensor, dst=partner_rank)
 
     def recvTensors(self, partner_rank, begin , end):
@@ -46,15 +45,16 @@ class RecursiveAllReduce:
         s = time.time()
         dist.recv(partner_section_tensor, src=partner_rank)
         e = time.time()
-        self.globalTensor = perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor)
-        print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
+        self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor)
+        if (DEBUG):
+            print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
 
     def reduce_scatter(self , left,  right):
         if(left >= right):
             return
         size = right - left + 1
         mid  = floor( (left + right)/2 )
-        partner_rank = partner_index(self.my_rank , mid , size)
+        partner_rank = self.partner_index(self.my_rank , mid , size)
 
         if (self.my_rank <= mid):
             self.sendTensors(partner_rank , mid + 1  , right)
@@ -73,7 +73,7 @@ class RecursiveAllReduce:
             return
         size = right - left + 1
         mid = floor((left + right) / 2)
-        partner_rank = partner_index(self.my_rank, mid, size)
+        partner_rank = self.partner_index(self.my_rank, mid, size)
 
         if(self.my_rank <= mid):
             self.all_gather(left , mid)
@@ -88,22 +88,24 @@ class RecursiveAllReduce:
             self.sendTensors(partner_rank , mid + 1  , right)
 
 
+    def algo(self):
+        self.reduce_scatter(0, 15)
+        self.clearNonPortion()
+        backup = torch.clone(self.globalTensor)
+        self.all_gather(0, 15)
+        if(DEBUG):
+            print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--master-ip", "-m", required=True, type=str)
     parser.add_argument("--num-nodes", "-n", required=True, type=int)
+    parser.add_argument("--tensor_size", "-t", required=True, type=int)
     parser.add_argument("--rank", "-r", required=True, type=int)
 
     args = parser.parse_args()
-    rec = RecursiveAllReduce()
-    rec.init_process(master_ip=args.master_ip,
-                 rank=args.rank,
-                 world_size=args.num_nodes)
-    rec.reduce_scatter( 0 , 15)
-    rec.clearNonPortion()
-    backup = torch.clone(rec.globalTensor)
-    rec.all_gather(0, 15)
-    print("End Tensor " , rec.my_rank," after reduce_scatter" , backup , " and all_gather ",  rec.globalTensor)
+    rec = RecursiveAllReduce(args.tensor_size , args.num_nodes , args.master_ip , args.rank)
+    rec.algo()
 
 
