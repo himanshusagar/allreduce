@@ -8,7 +8,9 @@
 
 parallel-ssh -i -h ~/followers "cd allreduce && git pull"
 
-for i in `seq 0 1`
+python3 ~/allreduce/shivaram/main.py --master-ip 10.10.1.1 --num-nodes 2 --rank 0 &
+
+for i in `seq 1`
 do
         RANK=$i
         echo "Starting rank $RANK"

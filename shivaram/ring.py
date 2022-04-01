@@ -38,7 +38,7 @@ def main():
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
             dist.send(send_buf, dst=_next_)
-
+            print("Finished send to ", _next_);
             recv_buf = torch.zeros(comm_size)
             dist.recv(recv_buf, src=prev)
             print("Finished recv from ", prev)
