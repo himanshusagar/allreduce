@@ -7,7 +7,7 @@ import time
 from torch import distributed as dist
 from base import BaseClass
 
-DEBUG = False
+DEBUG = True
 
 class RecursiveAllReduce(BaseClass):
     def __init__(self, tensor_size, world_size, master_ip , rank):
@@ -89,10 +89,10 @@ class RecursiveAllReduce(BaseClass):
 
 
     def algo(self):
-        self.reduce_scatter(0, 15)
+        self.reduce_scatter(0, self.WORLD_SIZE - 1)
         self.clearNonPortion()
         backup = torch.clone(self.globalTensor)
-        self.all_gather(0, 15)
+        self.all_gather(0, self.WORLD_SIZE - 1)
         if(DEBUG):
             print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--master-ip", "-m", required=True, type=str)
     parser.add_argument("--num-nodes", "-n", required=True, type=int)
-    parser.add_argument("--tensor_size", "-t", required=True, type=int)
+    parser.add_argument("--tensor-size", "-t", required=True, type=int)
     parser.add_argument("--rank", "-r", required=True, type=int)
 
     args = parser.parse_args()
