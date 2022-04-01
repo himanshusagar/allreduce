@@ -5,8 +5,8 @@
 # Assumes you can ssh from node0 to all the other nodes.
 
 parallel-ssh -i -h ~/followers "cd dev && cd allreduce && git pull"
-T_SIZE=3
-W_SIZE=3
+T_SIZE=4
+W_SIZE=4
 
 END_LOOP=$(expr $W_SIZE - 1)
 
