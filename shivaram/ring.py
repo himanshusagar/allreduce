@@ -6,7 +6,7 @@ import time
 from torch import distributed as dist
 
 DEVICE = "cpu"
-TENSOR_SIZE = 1024
+TENSOR_SIZE = 2
 
 def init_process(master_ip, rank, world_size):
     dist.init_process_group(backend="gloo",
@@ -20,6 +20,7 @@ def main():
     t = torch.rand(TENSOR_SIZE)
     # indices to send and receive from
     me = dist.get_rank()
+    print("On node " + str(me) + " tensor is : " t)
     world_size = dist.get_world_size()
     print(world_size)
     comm_size = int(TENSOR_SIZE/world_size)
@@ -33,6 +34,7 @@ def main():
 
     curi = me
     for i in range(0, world_size):
+        print("For iter : " + str(i) + ", on node " + str(me) + " tensor is : " t)
         if(me%2 == 0):
             print("here " + str(me))
             send_buf = torch.zeros(comm_size)
