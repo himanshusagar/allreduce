@@ -33,7 +33,7 @@ def main():
 
     curi = me
     for i in range(0, world_size):
-        if(i%2 == 0):
+        if(me%2 == 0):
             send_buf = torch.zeros(comm_size)
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
@@ -61,7 +61,7 @@ def main():
                 t[j] = t[j]+recv_buf[k]
                 k=k+1
 
-            curi = me
+            curi = curi+1
             send_buf = torch.zeros(comm_size)
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
