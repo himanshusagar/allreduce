@@ -99,7 +99,6 @@ class RecursiveAllReduce(BaseClass):
     def accumulate(self):
         t = torch.zeros(1)
         if dist.get_rank() == 0:
-
             tmp_list = self.send_time;
             tmp_list.extend(self.recv_time);
             # Recv tensors from all ranks in an array
@@ -107,7 +106,7 @@ class RecursiveAllReduce(BaseClass):
             recv_buffers[0] = mean(tmp_list);
             for i in range(1, dist.get_world_size()):
                 s = time.time()
-                dist.recv(recv_buffers[i - 1], src=i)
+                dist.recv(recv_buffers[i], src=i)
                 e = time.time()
             print("Finished recv in total ", recv_buffers);
             print("Finished recv value", sum(recv_buffers) / len(recv_buffers) );
@@ -125,7 +124,7 @@ class RecursiveAllReduce(BaseClass):
         self.all_gather(0, self.WORLD_SIZE - 1)
         if(DEBUG):
             print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
-        #self.accumulate();
+        self.accumulate()
 
 
 if __name__ == "__main__":
