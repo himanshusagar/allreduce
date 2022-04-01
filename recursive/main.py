@@ -6,6 +6,7 @@ import logging
 import time
 from torch import distributed as dist
 from base import BaseClass
+from statistics import mean
 
 DEBUG = True
 
@@ -14,6 +15,8 @@ class RecursiveAllReduce(BaseClass):
         super().__init__(tensor_size, world_size)
         self.globalTensor = torch.zeros(self.TENSOR_SIZE)
         self.init_process(master_ip , rank, world_size);
+        self.send_time = []
+        self.recv_time = []
 
     def init_process(self, master_ip, rank, world_size):
         dist.init_process_group(backend="gloo",
@@ -37,7 +40,11 @@ class RecursiveAllReduce(BaseClass):
 
     def sendTensors(self , partner_rank, begin , end):
         my_section_tensor = self.section_tensor(self.globalTensor, begin  , end)
+        s = time.time()
         dist.send(my_section_tensor, dst=partner_rank)
+        e = time.time()
+        self.send_time.append(e - s);
+
 
     def recvTensors(self, partner_rank, begin , end):
         partner_size = end - begin + 1
@@ -45,6 +52,7 @@ class RecursiveAllReduce(BaseClass):
         s = time.time()
         dist.recv(partner_section_tensor, src=partner_rank)
         e = time.time()
+        self.recv_time.append(e - s)
         self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor)
         if (DEBUG):
             print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
@@ -88,6 +96,28 @@ class RecursiveAllReduce(BaseClass):
             self.sendTensors(partner_rank , mid + 1  , right)
 
 
+    def accumulate(self):
+        t = torch.zeros(1)
+        if dist.get_rank() == 0:
+
+            tmp_list = self.send_time;
+            tmp_list.extend(self.recv_time);
+            # Recv tensors from all ranks in an array
+            recv_buffers = [torch.zeros(1) for i in range(0, dist.get_world_size())]
+            recv_buffers[0] = mean(tmp_list);
+            for i in range(1, dist.get_world_size()):
+                s = time.time()
+                dist.recv(recv_buffers[i - 1], src=i)
+                e = time.time()
+            print("Finished recv in total ", recv_buffers);
+            print("Finished recv value", sum(recv_buffers) / len(recv_buffers) );
+        else:
+            tmp_list = self.send_time;
+            tmp_list.extend(self.recv_time);
+            t[0] = mean(tmp_list);
+            dist.send(t, dst=0)
+
+
     def algo(self):
         self.reduce_scatter(0, self.WORLD_SIZE - 1)
         self.clearNonPortion()
@@ -95,6 +125,7 @@ class RecursiveAllReduce(BaseClass):
         self.all_gather(0, self.WORLD_SIZE - 1)
         if(DEBUG):
             print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
+        self.accumulate();
 
 
 if __name__ == "__main__":
