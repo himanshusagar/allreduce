@@ -6,6 +6,8 @@
 
 #python3 ring.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0 
 
+parallel-ssh -i -h ~/followers "cd allreduce && git pull"
+
 for i in `seq 0 15`
 do
         RANK=$i

@@ -33,21 +33,41 @@ def main():
 
     curi = me
     for i in range(0, world_size):
-        send_buf = torch.zeros(comm_size)
-        for idx in range(0,comm_size):
-            send_buf[idx]=t[curi*comm_size + idx]
-        dist.send(send_buf, dst=_next_)
+        if(i%2 == 0):
+            send_buf = torch.zeros(comm_size)
+            for idx in range(0,comm_size):
+                send_buf[idx]=t[curi*comm_size + idx]
+            dist.send(send_buf, dst=_next_)
 
-        recv_buf = torch.zeros(comm_size)
-        dist.recv(recv_buf, src=prev)
-        print("Finished recv from ", prev)
-        k = 0
-        curi = curi-1
-        if(curi < 0):
-            curi = world_size-1
-        for j in range(curi*comm_size, (curi+1)*comm_size):
-            t[j] = t[j]+recv_buf[k]
-            k=k+1
+            recv_buf = torch.zeros(comm_size)
+            dist.recv(recv_buf, src=prev)
+            print("Finished recv from ", prev)
+            k = 0
+            curi = curi-1
+            if(curi < 0):
+                curi = world_size-1
+            for j in range(curi*comm_size, (curi+1)*comm_size):
+                t[j] = t[j]+recv_buf[k]
+                k=k+1
+        else:
+            recv_buf = torch.zeros(comm_size)
+            dist.recv(recv_buf, src=prev)
+            print("Finished recv from ", prev)
+            k = 0
+            curi = curi-1
+            if(curi < 0):
+                curi = world_size-1
+            for j in range(curi*comm_size, (curi+1)*comm_size):
+                t[j] = t[j]+recv_buf[k]
+                k=k+1
+
+            curi = me
+            send_buf = torch.zeros(comm_size)
+            for idx in range(0,comm_size):
+                send_buf[idx]=t[curi*comm_size + idx]
+            dist.send(send_buf, dst=_next_)
+
+
 
 
 if __name__ == "__main__":
