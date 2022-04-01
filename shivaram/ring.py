@@ -6,7 +6,7 @@ import time
 from torch import distributed as dist
 
 DEVICE = "cpu"
-TENSOR_SIZE = 1024
+TENSOR_SIZE = 2
 
 def init_process(master_ip, rank, world_size):
     dist.init_process_group(backend="gloo",
