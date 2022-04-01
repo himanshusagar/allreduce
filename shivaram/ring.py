@@ -64,6 +64,8 @@ def main():
                 k=k+1
 
             curi = curi+1
+            if (curi >= world_size):
+                curi = 0
             send_buf = torch.zeros(comm_size)
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
