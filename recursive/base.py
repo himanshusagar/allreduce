@@ -1,4 +1,5 @@
 from math import floor
+import numpy as np
 
 import torch
 
@@ -8,6 +9,11 @@ class BaseClass:
         self.TENSOR_SIZE = tensor_size
         self.WORLD_SIZE = world_size
         self.SECTION_SIZE = int(self.TENSOR_SIZE / self.WORLD_SIZE)  # 64
+        self.send_time = []
+        self.recv_time = []
+
+    def calc(self , tmp_list):
+        return np.mean(tmp_list);
 
     def partner_index(self, rank, mid, size):
         if (rank <= mid):

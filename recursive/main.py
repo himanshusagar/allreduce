@@ -6,7 +6,7 @@ import logging
 import time
 from torch import distributed as dist
 from base import BaseClass
-from statistics import mean
+
 
 DEBUG = True
 
@@ -15,8 +15,7 @@ class RecursiveAllReduce(BaseClass):
         super().__init__(tensor_size, world_size)
         self.globalTensor = torch.zeros(self.TENSOR_SIZE)
         self.init_process(master_ip , rank, world_size);
-        self.send_time = []
-        self.recv_time = []
+
 
     def init_process(self, master_ip, rank, world_size):
         dist.init_process_group(backend="gloo",
@@ -103,13 +102,13 @@ class RecursiveAllReduce(BaseClass):
             #tmp_list.extend(self.recv_time);
             # Recv tensors from all ranks in an array
             recv_buffers = [torch.zeros(1) for i in range(0, dist.get_world_size())]
-            recv_buffers[0] = mean(tmp_list);
+            recv_buffers[0] = self.calc(tmp_list);
             for i in range(1, dist.get_world_size()):
                 s = time.time()
                 dist.recv(recv_buffers[i], src=i)
                 e = time.time()
             print("Finished recv in total ", recv_buffers);
-            print("Finished recv value", sum(recv_buffers) / len(recv_buffers) );
+            print("Finished recv value", self.calc(recv_buffers));
         else:
             tmp_list = self.send_time;
             #tmp_list.extend(self.recv_time);
