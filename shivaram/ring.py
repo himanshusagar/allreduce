@@ -14,7 +14,7 @@ def init_process(master_ip, rank, world_size):
                             rank=rank,
                             world_size=world_size)
 
-def ring_gather(tensor, comm_size, world_size, me, prev, _next_):
+def ring_gather(t, comm_size, world_size, me, prev, _next_):
     curi = me
     for i in range(0, world_size):
         if(me%2 == 0):
@@ -67,7 +67,7 @@ def ring_gather(tensor, comm_size, world_size, me, prev, _next_):
                 curi = world_size-1
 
 
-def ring_scatter(tensor, comm_size, world_size, me, prev, _next_):
+def ring_scatter(t, comm_size, world_size, me, prev, _next_):
     curi = me+1
     if(curi >= world_size):
         curi = 0;
