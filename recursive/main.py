@@ -125,7 +125,7 @@ class RecursiveAllReduce(BaseClass):
         self.all_gather(0, self.WORLD_SIZE - 1)
         if(DEBUG):
             print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
-        self.accumulate();
+        #self.accumulate();
 
 
 if __name__ == "__main__":
