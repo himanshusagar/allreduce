@@ -15,6 +15,11 @@ class BaseClass:
     def calc(self , tmp_list):
         return np.mean(tmp_list);
 
+    def get_tmp_list(self):
+        #tmp_list = self.send_time;
+        # tmp_list.extend(self.recv_time)
+        return self.send_time
+
     def partner_index(self, rank, mid, size):
         if (rank <= mid):
             return rank + floor(size / 2);
