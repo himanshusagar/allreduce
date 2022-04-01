@@ -34,6 +34,7 @@ def main():
     curi = me
     for i in range(0, world_size):
         if(me%2 == 0):
+            print("here " + str(me))
             send_buf = torch.zeros(comm_size)
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
@@ -50,6 +51,7 @@ def main():
                 t[j] = t[j]+recv_buf[k]
                 k=k+1
         else:
+            print("here " + str(me))
             recv_buf = torch.zeros(comm_size)
             dist.recv(recv_buf, src=prev)
             print("Finished recv from ", prev)
