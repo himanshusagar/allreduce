@@ -8,7 +8,7 @@
 
 parallel-ssh -i -h ~/followers "cd allreduce && git pull"
 
-python3 ~/allreduce/shivaram/main.py --master-ip 10.10.1.1 --num-nodes 2 --rank 0 &
+python3 ~/allreduce/shivaram/ring.py --master-ip 10.10.1.1 --num-nodes 2 --rank 0 &
 
 for i in `seq 1`
 do
