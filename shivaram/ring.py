@@ -20,7 +20,7 @@ def main():
     t = torch.rand(TENSOR_SIZE)
     # indices to send and receive from
     me = dist.get_rank()
-    print("On node " + str(me) + " tensor is : " t)
+    print("On node " + str(me) + " tensor is : " + str(t))
     world_size = dist.get_world_size()
     print(world_size)
     comm_size = int(TENSOR_SIZE/world_size)
@@ -34,7 +34,7 @@ def main():
 
     curi = me
     for i in range(0, world_size):
-        print("For iter : " + str(i) + ", on node " + str(me) + " tensor is : " t)
+        print("For iter : " + str(i) + ", on node " + str(me) + " tensor is : " + str(t))
         if(me%2 == 0):
             print("here " + str(me))
             send_buf = torch.zeros(comm_size)
