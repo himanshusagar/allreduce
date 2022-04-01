@@ -100,7 +100,7 @@ class RecursiveAllReduce(BaseClass):
         t = torch.zeros(1)
         if dist.get_rank() == 0:
             tmp_list = self.send_time;
-            tmp_list.extend(self.recv_time);
+            #tmp_list.extend(self.recv_time);
             # Recv tensors from all ranks in an array
             recv_buffers = [torch.zeros(1) for i in range(0, dist.get_world_size())]
             recv_buffers[0] = mean(tmp_list);
@@ -112,7 +112,7 @@ class RecursiveAllReduce(BaseClass):
             print("Finished recv value", sum(recv_buffers) / len(recv_buffers) );
         else:
             tmp_list = self.send_time;
-            tmp_list.extend(self.recv_time);
+            #tmp_list.extend(self.recv_time);
             t[0] = mean(tmp_list);
             dist.send(t, dst=0)
 
