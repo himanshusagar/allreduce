@@ -5,12 +5,12 @@
 # Assumes you can ssh from node0 to all the other nodes.
 
 parallel-ssh -i -h ~/followers "cd dev && cd allreduce && git pull"
-T_SIZE=2
-W_SIZE=2
+T_SIZE=3
+W_SIZE=3
 
 python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_SIZE --rank 0 --tensor-size $T_SIZE &
 
-for i in `seq 1 15`
+for i in `seq 1 $W_SIZE`
 do
         RANK=$i
         echo "Staring rank $RANK"
