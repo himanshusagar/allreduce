@@ -89,10 +89,10 @@ class RecursiveAllReduce(BaseClass):
 
 
     def algo(self):
-        self.reduce_scatter(0, 15)
+        self.reduce_scatter(0, self.WORLD_SIZE - 1)
         self.clearNonPortion()
         backup = torch.clone(self.globalTensor)
-        self.all_gather(0, 15)
+        self.all_gather(0, self.WORLD_SIZE - 1)
         if(DEBUG):
             print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
 
