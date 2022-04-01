@@ -86,7 +86,7 @@ def main(tensor_size):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--tensor-size", "-m", required=False, type=int, default=1024)
+    parser.add_argument("--tensor-size", "-t", required=False, type=int, default=1024)
     parser.add_argument("--master-ip", "-m", required=True, type=str)
     parser.add_argument("--num-nodes", "-n", required=False, type=int, default=16)
     parser.add_argument("--rank", "-r", required=True, type=int)
