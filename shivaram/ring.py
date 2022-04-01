@@ -6,7 +6,7 @@ import time
 from torch import distributed as dist
 
 DEVICE = "cpu"
-TENSOR_SIZE = 2
+TENSOR_SIZE = 1024
 
 def init_process(master_ip, rank, world_size):
     dist.init_process_group(backend="gloo",
@@ -68,6 +68,9 @@ def main():
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
             dist.send(send_buf, dst=_next_)
+            curi = curi-1
+            if(curi < 0):
+                curi = world_size-1
 
 
 
