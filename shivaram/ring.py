@@ -6,7 +6,6 @@ import time
 from torch import distributed as dist
 
 DEVICE = "cpu"
-TENSOR_SIZE = 16
 
 def init_process(master_ip, rank, world_size):
     dist.init_process_group(backend="gloo",
@@ -158,7 +157,7 @@ def main(tensor_size):
     if(me != 0):
         dist.send(times_buf, dst=0)
     else:
-        all_times_buf = torch.zeros(1,16)
+        all_times_buf = torch.zeros(1,world_size)
         all_times_buf[0][0] = times_buf[0]
         for i  in range(1,world_size):
             dist.recv(all_times_buf[0][i], src=i)
