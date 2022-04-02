@@ -15,6 +15,7 @@ def init_process(master_ip, rank, world_size):
                             world_size=world_size)
 
 def ring_gather(t, comm_size, world_size, me, prev, _next_):
+    send_times = torch.zeros(world_size-1)
     curi = me
     for i in range(0, world_size-1):
         if(me%2 == 0):
@@ -24,7 +25,8 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.send(send_buf, dst=_next_)
             e=time.time()
-            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            send_times[i] = e-s
+#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
 
             recv_buf = torch.zeros(comm_size)
             s=time.time()
@@ -43,6 +45,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
+            send_times[i] = e-s
 #            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
@@ -61,14 +64,17 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.send(send_buf, dst=_next_)
             e=time.time()
-            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
-    print(t)
+
+    return torch.mean(send_times)
+#    print(t)
 
 
 def ring_scatter(t, comm_size, world_size, me, prev, _next_):
+    send_times = torch.zeros(world_size-1)
     curi = me+1
     if(curi >= world_size):
         curi = 0;
@@ -80,7 +86,8 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.send(send_buf, dst=_next_)
             e=time.time()
-            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            send_times[i] = e-s
+#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
 
             recv_buf = torch.zeros(comm_size)
             s=time.time()
@@ -117,10 +124,13 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.send(send_buf, dst=_next_)
             e=time.time()
-            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            send_times[i] = e-s
+#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
+
+    return torch.mean(send_times)
 
 
 def main(tensor_size):
@@ -140,9 +150,21 @@ def main(tensor_size):
     if(_next_ >= world_size):
         _next_ = 0
     
-    ring_gather(t, comm_size, world_size, me, prev, _next_)
-    ring_scatter(t, comm_size, world_size, me, prev, _next_)
-    print(t)
+    gather_mean = ring_gather(t, comm_size, world_size, me, prev, _next_)
+    scatter_mean = ring_scatter(t, comm_size, world_size, me, prev, _next_)
+
+    times_buf = torch.zeros(1)
+    times_buf = (gather_mean[0] + scatter_mean[0])/2
+    if(me != 0):
+        dist.send(times_buf, dst=0)
+    else:
+        all_times_buf = torch.zeros(1,16)
+        all_times_buf[0][0] = times_buf[0]
+        for i  in range(1,world_size):
+            dist.recv(all_times_buf[0][i], src=i)
+
+        torch.mean(all_times_buf)
+        print("Average send time across all VMs : ", all_times_buf.item())
 
 
 if __name__ == "__main__":
