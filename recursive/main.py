@@ -7,7 +7,7 @@ import time
 from torch import distributed as dist
 from base import BaseClass
 
-PORT_VAL = 7580;
+PORT_VAL = 5580;
 DEBUG = False
 
 class RecursiveAllReduce(BaseClass):
