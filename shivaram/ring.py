@@ -69,7 +69,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             if(curi < 0):
                 curi = world_size-1
 
-    return torch.mean(send_times)
+    return torch.mean(send_times).item()
 #    print(t)
 
 
@@ -130,7 +130,7 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
             if(curi < 0):
                 curi = world_size-1
 
-    return torch.mean(send_times)
+    return torch.mean(send_times).item()
 
 
 def main(tensor_size):
@@ -154,7 +154,7 @@ def main(tensor_size):
     scatter_mean = ring_scatter(t, comm_size, world_size, me, prev, _next_)
 
     times_buf = torch.zeros(1)
-    times_buf = (gather_mean[0] + scatter_mean[0])/2
+    times_buf[0] = (gather_mean + scatter_mean)/2
     if(me != 0):
         dist.send(times_buf, dst=0)
     else:
