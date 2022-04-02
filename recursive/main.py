@@ -19,7 +19,7 @@ class RecursiveAllReduce(BaseClass):
 
     def init_process(self, master_ip, rank, world_size):
         dist.init_process_group(backend="gloo",
-                                init_method="tcp://" + master_ip + ":6588",
+                                init_method="tcp://" + master_ip + ":7580",
                                 rank=rank,
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
