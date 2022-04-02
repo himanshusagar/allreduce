@@ -148,10 +148,10 @@ def main(tensor_size):
     _next_ = me+1
     if(_next_ >= world_size):
         _next_ = 0
-    std::cout << "Starting ring reduce...."
+    print("Starting ring reduce....")
     gather_mean = ring_gather(t, comm_size, world_size, me, prev, _next_)
     scatter_mean = ring_scatter(t, comm_size, world_size, me, prev, _next_)
-    std::cout << "Finished"
+    print("Finished")
 
     times_buf = torch.zeros(1)
     times_buf[0] = (gather_mean + scatter_mean)/2
