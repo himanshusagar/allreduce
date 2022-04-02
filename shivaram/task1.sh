@@ -8,11 +8,14 @@
 
 parallel-ssh -i -h ~/followers "cd allreduce && git pull"
 
-python3 ~/allreduce/shivaram/ring.py -t {1} --master-ip 10.10.1.1 --num-nodes 16 --rank 0 &
-
-for i in `seq 1 15`
+#4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072
+for j in 1 2 
 do
-        RANK=$i
-        echo "Starting rank $RANK"
-        ssh -f a$i "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t {1} --master-ip 10.10.1.1 --num-nodes 16 --rank $RANK"
+	T_SIZE=$($j*1024)
+	for i in `seq 1 15`
+	do
+		RANK=$i
+        	ssh -f a$i "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 --num-nodes 16 --rank $RANK"
+	done
+	python3 ~/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 --num-nodes 16 --rank 0 &
 done
