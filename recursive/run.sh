@@ -5,18 +5,31 @@
 # Assumes you can ssh from node0 to all the other nodes.
 
 parallel-ssh -i -h ~/followers "cd dev && cd allreduce && git pull"
-T_SIZE=1024
-W_SIZE=16
 
+run_func()
+{
+
+T_SIZE=$1
+W_SIZE=$2
 END_LOOP=$(expr $W_SIZE - 1)
-
-python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_SIZE --rank 0 --tensor-size $T_SIZE &
+echo "run_func  $W_SIZE $T_SIZE"
+#python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_SIZE --rank 0 --tensor-size $T_SIZE &
 
 for i in `seq 1 $END_LOOP`
 do
         RANK=$i
-        echo "Staring rank $RANK"
-        ssh -f a$i "nohup python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_SIZE --rank $RANK --tensor-size $T_SIZE"
+        #echo "Staring rank $RANK $WORLD_SIZE $T_SIZE"
+        #ssh -f a$i "nohup python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_SIZE --rank $RANK --tensor-size $T_SIZE"
 done
+}
 
-#python3 main.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0
+echo "Start of script..."
+KB=1024
+MB=$((KB * KB))
+HundredMB=$(expr $MB * 100)
+WORLD_SIZE=16
+
+for tensor_size in $(seq $KB $HundredMB $KB)
+do
+  run_func $tensor_size $WORLD_SIZE
+done
