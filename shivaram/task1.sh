@@ -7,11 +7,11 @@
 #python3 ring.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0 
 
 parallel-ssh -i -h ~/followers "cd allreduce && git pull"
-
+KB=1024
 #4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072
 for j in 1 2 
 do
-	T_SIZE=$($j*1024)
+	T_SIZE=$(${j}*${KB})
 	echo $T_SIZE
 	for i in `seq 1 15`
 	do
