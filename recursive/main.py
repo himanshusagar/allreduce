@@ -111,7 +111,6 @@ class RecursiveAllReduce(BaseClass):
             print( toPrint )
         else:
             tmp_list = self.get_tmp_list()
-            #tmp_list.extend(self.recv_time);
             t[0] = self.calc(tmp_list);
             dist.send(t, dst=0)
 
