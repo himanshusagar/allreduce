@@ -30,6 +30,7 @@ python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_S
 echo "Start of script..."
 KB=1024
 STEPSIZE=$((KB*512))
+STEPSIZE=$((STEPSIZE-1))
 
 MB=$((KB*KB))
 HundredMB=$(($MB*100))
