@@ -12,6 +12,7 @@ parallel-ssh -i -h ~/followers "cd allreduce && git pull"
 for j in 1 2 
 do
 	T_SIZE=$($j*1024)
+	echo $T_SIZE
 	for i in `seq 1 15`
 	do
 		RANK=$i
