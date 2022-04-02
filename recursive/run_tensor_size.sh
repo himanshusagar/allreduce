@@ -42,7 +42,7 @@ PORT_VAL=6581
 
 for i in 1 2 4 8 16 32 128 256 512; do
       tensor_size=$(( $KB * $i))
-      echo "$tensor_size $i"
+      #echo "$tensor_size $i"
       run_func $tensor_size $WORLD_SIZE $PORT_VAL
       PORT_VAL=$((PORT_VAL+2))
 done
@@ -50,7 +50,7 @@ done
 
 for i in 1 10 20 40 60 80 100 ; do
       tensor_size=$(( $MB * $i))
-      echo "$tensor_size $i"
+      #echo "$tensor_size $i"
       run_func $tensor_size $WORLD_SIZE $PORT_VAL
       PORT_VAL=$((PORT_VAL+2))
 done
