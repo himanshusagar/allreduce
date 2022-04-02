@@ -28,10 +28,13 @@ python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_S
 
 echo "Start of script..."
 KB=1024
+TenKB=$((KB*10))
+
 MB=$((KB*KB))
 HundredMB=$(($MB*100))
+
 WORLD_SIZE=16
 
-for tensor_size in `seq $KB $KB $HundredMB`; do
+for tensor_size in `seq $KB $TenKB $HundredMB`; do
       run_func $tensor_size $WORLD_SIZE
 done
