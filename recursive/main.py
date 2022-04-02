@@ -132,7 +132,7 @@ if __name__ == "__main__":
     parser.add_argument("--num-nodes", "-n", required=True, type=int)
     parser.add_argument("--tensor-size", "-t", required=True, type=int)
     parser.add_argument("--rank", "-r", required=True, type=int)
-    parser.add_argument("--port", "-p", required=False, type=int, default=0)
+    parser.add_argument("--port", "-p", required=True, type=int)
 
     args = parser.parse_args()
     if(args.port > 0):
