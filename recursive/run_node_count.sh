@@ -30,7 +30,7 @@ echo "Start of script..."
 KB=1024
 MB=$((KB*KB))
 TenMB=$(($MB*10))
-PORT_VAL=5581
+PORT_VAL=7981
 tensor_size=$TenMB
 
 for WORLD_SIZE in 2 4 8 16; do
