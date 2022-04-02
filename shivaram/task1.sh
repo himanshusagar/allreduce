@@ -7,7 +7,7 @@
 #python3 ring.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0 
 
 parallel-ssh -i -h ~/followers "cd allreduce && git pull"
-<<com
+
 KB=1024
 PORT=6003
 incr=1
@@ -24,8 +24,8 @@ do
 	PORT=$((PORT+incr))
 
 done
-com
 
+<<com
 KB=1024
 k=10
 T_SIZE=$((k*KB))

@@ -15,6 +15,7 @@ def init_process(master_ip, port, rank, world_size):
 
 def ring_gather(t, comm_size, world_size, me, prev, _next_):
     send_times = torch.zeros(world_size-1)
+    recv_times = torch.zeros(world_size-1)
     curi = me
     for i in range(0, world_size-1):
         if(me%2 == 0):
@@ -31,6 +32,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
+            recv_times[i] = e-s
 #            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
@@ -44,6 +46,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
+            recv_times[i] = e-s
 #            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
@@ -68,12 +71,13 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             if(curi < 0):
                 curi = world_size-1
 
-    return torch.mean(send_times).item()
+    return torch.mean(recv_times).item()
 #    print(t)
 
 
 def ring_scatter(t, comm_size, world_size, me, prev, _next_):
     send_times = torch.zeros(world_size-1)
+    recv_times= torch.zeros(world_size-1)
     curi = me+1
     if(curi >= world_size):
         curi = 0;
@@ -92,6 +96,7 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
+            recv_times[i] = e-s
 #            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
@@ -105,6 +110,7 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
+            recv_times[i] = e-s
 #            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             curi = curi-1
             if(curi < 0):
@@ -129,7 +135,7 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
             if(curi < 0):
                 curi = world_size-1
 
-    return torch.mean(send_times).item()
+    return torch.mean(recv_times).item()
 
 
 def main(tensor_size):
@@ -164,7 +170,7 @@ def main(tensor_size):
             dist.recv(all_times_buf[0][i], src=i)
 
         mean_time = torch.mean(all_times_buf)
-        print("Tensor size : ", tensor_size, " World size : " , world_size, " , Average send time across all VMs : ", mean_time.item())
+        print("Tensor size : ", tensor_size, " World size : " , world_size, " , Average recv time across all VMs : ", mean_time.item())
 
 
 if __name__ == "__main__":
