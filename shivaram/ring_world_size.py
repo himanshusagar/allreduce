@@ -25,13 +25,13 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             dist.send(send_buf, dst=_next_)
             e=time.time()
             send_times[i] = e-s
-#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            print("Finished send to ", _next_, " in ", e - s, " seconds ")
 
             recv_buf = torch.zeros(comm_size)
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
-#            print("Finished recv from ", prev, " in ", e - s, " seconds ")
+            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
             if(curi < 0):
@@ -44,7 +44,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
-#            print("Finished recv from ", prev, " in ", e - s, " seconds ")
+            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
             if(curi < 0):
@@ -63,7 +63,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             dist.send(send_buf, dst=_next_)
             e=time.time()
             send_times[i] = e-s
-#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            print("Finished send to ", _next_, " in ", e - s, " seconds ")
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
