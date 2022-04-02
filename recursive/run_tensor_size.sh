@@ -40,7 +40,7 @@ HundredMB=$(($MB*100))
 WORLD_SIZE=16
 PORT_VAL=7581
 
-for j in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072; do
+for i in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072; do
       tensor_size=$(( $KB * $i))
       #echo "$tensor_size $i"
       run_func $tensor_size $WORLD_SIZE $PORT_VAL
