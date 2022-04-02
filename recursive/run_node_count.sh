@@ -31,7 +31,7 @@ KB=1024
 MB=$((KB*KB))
 TenMB=$(($MB*10))
 PORT_VAL=6581
-tensor_size=TenMB
+tensor_size=$TenMB
 
 for WORLD_SIZE in 2 4 8 16; do
       run_func $tensor_size $WORLD_SIZE $PORT_VAL
