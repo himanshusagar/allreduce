@@ -14,7 +14,7 @@ W_SIZE=$2
 PORT_VAL=$3
 END_LOOP=$(($W_SIZE-1))
 
-echo "inside run_func $T_SIZE $W_SIZE $END_LOOP"
+echo "inside run_func $T_SIZE $W_SIZE $END_LOOP $PORT_VAL"
 
 for i in `seq 1 $END_LOOP`
 do
