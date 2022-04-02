@@ -31,7 +31,7 @@ k=10
 T_SIZE=$((k*KB))
 T_SIZE=$((T_SIZE*KB))
 ssh -f a1 "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p 6003 --num-nodes 2 --rank 1"
-python3 ~/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p 6003--num-nodes 2 --rank 0
+python3 ~/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p 6003 --num-nodes 2 --rank 0
 com
 
 <<com
