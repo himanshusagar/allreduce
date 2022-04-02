@@ -36,7 +36,7 @@ MB=$((KB*KB))
 HundredMB=$(($MB*100))
 
 WORLD_SIZE=16
-PORT_VAL=7581
+PORT_VAL=6581
 
 for tensor_size in `seq $KB $STEPSIZE $HundredMB`; do
       run_func $tensor_size $WORLD_SIZE $PORT_VAL
