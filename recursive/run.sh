@@ -18,7 +18,7 @@ END_LOOP=$(($W_SIZE-1))
 for i in `seq 1 $END_LOOP`
 do
         RANK=$i
-        echo "Staring rank $RANK $WORLD_SIZE $T_SIZE"
+        #echo "Staring rank $RANK $WORLD_SIZE $T_SIZE"
         ssh -f a$i "nohup python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_SIZE --rank $RANK --tensor-size $T_SIZE"
 done
 
