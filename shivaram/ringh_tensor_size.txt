@@ -1,0 +1,138 @@
+[1] 02:43:01 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28410
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[2] 02:43:01 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28412
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[3] 02:43:01 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28412
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[4] 02:43:01 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28413
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[5] 02:43:01 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28411
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[6] 02:43:01 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28412
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[7] 02:43:01 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28413
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[8] 02:43:01 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28410
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[9] 02:43:01 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28410
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[10] 02:43:01 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28413
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[11] 02:43:01 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28412
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[12] 02:43:01 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28411
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[13] 02:43:01 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28410
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[14] 02:43:01 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28411
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+[15] 02:43:01 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28411
+Updating a517a9b..a4a6a56
+Fast-forward
+ shivaram/ring.py  | 1 -
+ shivaram/task1.sh | 4 +---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   a517a9b..a4a6a56  main       -> origin/main
+Tensor size :  1024  Average send time across all VMs :  0.002919302321970463
+Tensor size :  2048  Average send time across all VMs :  0.004121475387364626
+Tensor size :  4096  Average send time across all VMs :  0.0061682602390646935
+Tensor size :  8192  Average send time across all VMs :  0.008686145767569542
+Tensor size :  16384  Average send time across all VMs :  0.010628843680024147
+Tensor size :  32768  Average send time across all VMs :  0.013842186890542507
+Tensor size :  65536  Average send time across all VMs :  0.02329922653734684
+Tensor size :  131072  Average send time across all VMs :  0.039626143872737885
+Tensor size :  262144  Average send time across all VMs :  0.07599949836730957
+Tensor size :  524288  Average send time across all VMs :  0.1636788696050644
+Tensor size :  1048576  Average send time across all VMs :  0.3262019753456116
+Tensor size :  2097152  Average send time across all VMs :  0.5490521788597107
+Tensor size :  4194304  Average send time across all VMs :  1.0903046131134033
+Tensor size :  8388608  Average send time across all VMs :  2.108844757080078
+Tensor size :  16777216  Average send time across all VMs :  4.2103424072265625
+Tensor size :  33554432  Average send time across all VMs :  8.63286304473877
+Tensor size :  67108864  Average send time across all VMs :  16.92877197265625
+Tensor size :  134217728  Average send time across all VMs :  33.85475540161133

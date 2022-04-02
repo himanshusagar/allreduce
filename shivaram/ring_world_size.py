@@ -25,13 +25,13 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             dist.send(send_buf, dst=_next_)
             e=time.time()
             send_times[i] = e-s
-#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            print("Finished send to ", _next_, " in ", e - s, " seconds ")
 
             recv_buf = torch.zeros(comm_size)
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
-#            print("Finished recv from ", prev, " in ", e - s, " seconds ")
+            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
             if(curi < 0):
@@ -44,7 +44,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
-#            print("Finished recv from ", prev, " in ", e - s, " seconds ")
+            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
             if(curi < 0):
@@ -63,7 +63,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             dist.send(send_buf, dst=_next_)
             e=time.time()
             send_times[i] = e-s
-#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            print("Finished send to ", _next_, " in ", e - s, " seconds ")
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
@@ -171,7 +171,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--tensor-size", "-t", required=False, type=int, default=16)
     parser.add_argument("--master-ip", "-m", required=True, type=str)
-    parser.add_argument("--port", "-p", required=False, type=str, default="6003")
+    parser.add_argument("--port", "-p", required=False, type=str, default="6001")
     parser.add_argument("--num-nodes", "-n", required=False, type=int, default=16)
     parser.add_argument("--rank", "-r", required=True, type=int)
 
@@ -179,7 +179,7 @@ if __name__ == "__main__":
     init_process(master_ip=args.master_ip, port=args.port,
                  rank=args.rank,
                  world_size=args.num_nodes)
-#    print(args.port)
-#    print(args.num_nodes)
-#    print(args.tensor_size)
+    print(args.port)
+    print(args.num_nodes)
+    print(args.tensor_size)
     main(tensor_size=args.tensor_size)
