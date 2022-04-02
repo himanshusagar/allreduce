@@ -18,7 +18,7 @@ do
 	for i in `seq 1 15`
 	do
 		RANK=$i
-        	ssh -f a$i "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p $PORT--num-nodes 16 --rank $RANK"
+        	ssh -f a$i "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p $PORT --num-nodes 16 --rank $RANK"
 	done
 	python3 ~/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p $PORT --num-nodes 16 --rank 0 &
 	PORT=$((PORT+incr))
