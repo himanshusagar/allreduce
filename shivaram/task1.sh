@@ -8,7 +8,6 @@
 
 parallel-ssh -i -h ~/followers "cd allreduce && git pull"
 
-<<com
 KB=1024
 #4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072
 for j in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072
@@ -23,9 +22,9 @@ do
 
 	wait
 done
-com
 
 
+<<com
 KB=1024
 k=10
 T_SIZE=$((k*KB))
@@ -33,7 +32,6 @@ T_SIZE=$((T_SIZE*KB))
 ssh -f a1 "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 --num-nodes 2 --rank 1"
 python3 ~/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 --num-nodes 2 --rank 0 &
 
-<<com
 k=10
 T_SIZE=$((k*KB))
 T_SIZE=$((T_SIZE*KB))
