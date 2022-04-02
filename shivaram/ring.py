@@ -65,6 +65,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
+    print(t)
 
 
 def ring_scatter(t, comm_size, world_size, me, prev, _next_):
