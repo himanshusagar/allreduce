@@ -25,13 +25,13 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             dist.send(send_buf, dst=_next_)
             e=time.time()
             send_times[i] = e-s
-#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            print("Finished send to ", _next_, " in ", e - s, " seconds ")
 
             recv_buf = torch.zeros(comm_size)
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
-#            print("Finished recv from ", prev, " in ", e - s, " seconds ")
+            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
             if(curi < 0):
@@ -44,8 +44,7 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.recv(recv_buf, src=prev)
             e=time.time()
-            send_times[i] = e-s
-#            print("Finished recv from ", prev, " in ", e - s, " seconds ")
+            print("Finished recv from ", prev, " in ", e - s, " seconds ")
             k = 0
             curi = curi-1
             if(curi < 0):
@@ -63,7 +62,8 @@ def ring_gather(t, comm_size, world_size, me, prev, _next_):
             s=time.time()
             dist.send(send_buf, dst=_next_)
             e=time.time()
-#            print("Finished send to ", _next_, " in ", e - s, " seconds ")
+            send_times[i] = e-s
+            print("Finished send to ", _next_, " in ", e - s, " seconds ")
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
@@ -148,9 +148,10 @@ def main(tensor_size):
     _next_ = me+1
     if(_next_ >= world_size):
         _next_ = 0
-    
+    std::cout << "Starting ring reduce...."
     gather_mean = ring_gather(t, comm_size, world_size, me, prev, _next_)
     scatter_mean = ring_scatter(t, comm_size, world_size, me, prev, _next_)
+    std::cout << "Finished"
 
     times_buf = torch.zeros(1)
     times_buf[0] = (gather_mean + scatter_mean)/2
@@ -177,4 +178,6 @@ if __name__ == "__main__":
     init_process(master_ip=args.master_ip,
                  rank=args.rank,
                  world_size=args.num_nodes)
+    print(args.num_nodes)
+    print(args.tensor_size)
     main(tensor_size=args.tensor_size)
