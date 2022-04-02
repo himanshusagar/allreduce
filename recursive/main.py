@@ -7,7 +7,7 @@ import time
 from torch import distributed as dist
 from base import BaseClass
 
-
+PORT_VAL = 7580;
 DEBUG = False
 
 class RecursiveAllReduce(BaseClass):
@@ -19,7 +19,7 @@ class RecursiveAllReduce(BaseClass):
 
     def init_process(self, master_ip, rank, world_size):
         dist.init_process_group(backend="gloo",
-                                init_method="tcp://" + master_ip + ":7581",
+                                init_method="tcp://" + master_ip + ":" + str(PORT_VAL),
                                 rank=rank,
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
@@ -132,8 +132,11 @@ if __name__ == "__main__":
     parser.add_argument("--num-nodes", "-n", required=True, type=int)
     parser.add_argument("--tensor-size", "-t", required=True, type=int)
     parser.add_argument("--rank", "-r", required=True, type=int)
+    parser.add_argument("--port", "-p", required=False, type=int, default=0)
 
     args = parser.parse_args()
+    if(args.port > 0):
+        PORT_VAL = args.port
     rec = RecursiveAllReduce(args.tensor_size , args.num_nodes , args.master_ip , args.rank)
     rec.algo()
 
