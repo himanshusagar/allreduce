@@ -18,7 +18,7 @@ class BaseClass:
     def get_tmp_list(self):
         #tmp_list = self.send_time;
         # tmp_list.extend(self.recv_time)
-        return self.send_time
+        return self.recv_time
 
     def partner_index(self, rank, mid, size):
         if (rank <= mid):
