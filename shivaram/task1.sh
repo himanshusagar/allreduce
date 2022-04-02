@@ -9,10 +9,10 @@
 parallel-ssh -i -h ~/followers "cd allreduce && git pull"
 
 KB=1024
-PORT=6000
+PORT=6003
 incr=1
 #4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072
-for j in 1 2
+for j in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072
 do
 	T_SIZE=$((j*KB))
 	for i in `seq 1 15`

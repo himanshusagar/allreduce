@@ -171,7 +171,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--tensor-size", "-t", required=False, type=int, default=16)
     parser.add_argument("--master-ip", "-m", required=True, type=str)
-    parser.add_argument("--port", "-p", required=False, type=str, default="6001")
+    parser.add_argument("--port", "-p", required=False, type=str, default="6003")
     parser.add_argument("--num-nodes", "-n", required=False, type=int, default=16)
     parser.add_argument("--rank", "-r", required=True, type=int)
 
@@ -179,7 +179,7 @@ if __name__ == "__main__":
     init_process(master_ip=args.master_ip, port=args.port,
                  rank=args.rank,
                  world_size=args.num_nodes)
-    print(args.port)
-    print(args.num_nodes)
-    print(args.tensor_size)
+#    print(args.port)
+#    print(args.num_nodes)
+#    print(args.tensor_size)
     main(tensor_size=args.tensor_size)
