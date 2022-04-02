@@ -163,8 +163,8 @@ def main(tensor_size):
         for i  in range(1,world_size):
             dist.recv(all_times_buf[0][i], src=i)
 
-        torch.mean(all_times_buf)
-        print("Average send time across all VMs : ", all_times_buf.item())
+        mean_time = torch.mean(all_times_buf)
+        print("Average send time across all VMs : ", mean_time.item())
 
 
 if __name__ == "__main__":
