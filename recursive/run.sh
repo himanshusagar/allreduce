@@ -13,7 +13,7 @@ T_SIZE=$1
 W_SIZE=$2
 END_LOOP=$(($W_SIZE-1))
 
-echo "inside run_func $T_SIZE $W_SIZE $END_LOOP"
+#echo "inside run_func $T_SIZE $W_SIZE $END_LOOP"
 
 for i in `seq 1 $END_LOOP`
 do
@@ -32,7 +32,6 @@ MB=$((KB*KB))
 HundredMB=$(($MB*100))
 WORLD_SIZE=16
 
-for tensor_size in `seq $KB $KB $KB`; do
+for tensor_size in `seq $KB $KB $HundredMB`; do
       run_func $tensor_size $WORLD_SIZE
-      break
 done
