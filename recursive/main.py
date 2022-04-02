@@ -39,22 +39,22 @@ class RecursiveAllReduce(BaseClass):
 
     def sendTensors(self , partner_rank, begin , end):
         my_section_tensor = self.section_tensor(self.globalTensor, begin  , end)
-        s = time.time()
+        #s = time.time()
         dist.send(my_section_tensor, dst=partner_rank)
-        e = time.time()
-        self.send_time.append(e - s);
+        #e = time.time()
+        #self.send_time.append(e - s);
 
 
     def recvTensors(self, partner_rank, begin , end):
         partner_size = end - begin + 1
         partner_section_tensor = torch.zeros(partner_size)
-        s = time.time()
+        #s = time.time()
         dist.recv(partner_section_tensor, src=partner_rank)
-        e = time.time()
-        self.recv_time.append(e - s)
+        #e = time.time()
+        #self.recv_time.append(e - s)
         self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor)
-        if (DEBUG):
-            print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
+        #if (DEBUG):
+        #    print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
 
     def reduce_scatter(self , left,  right):
         if(left >= right):
@@ -116,10 +116,16 @@ class RecursiveAllReduce(BaseClass):
 
 
     def algo(self):
+        s = time.time();
         self.reduce_scatter(0, self.WORLD_SIZE - 1)
+        e = time.time();
+        self.tot_time.append(e - s);
         self.clearNonPortion()
         backup = torch.clone(self.globalTensor)
+        s = time.time()
         self.all_gather(0, self.WORLD_SIZE - 1)
+        e = time.time()
+        self.tot_time.append(e - s);
         if(DEBUG):
             print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
         self.accumulate()
