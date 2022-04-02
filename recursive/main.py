@@ -8,7 +8,7 @@ from torch import distributed as dist
 from base import BaseClass
 
 
-DEBUG = True
+DEBUG = False
 
 class RecursiveAllReduce(BaseClass):
     def __init__(self, tensor_size, world_size, master_ip , rank):
