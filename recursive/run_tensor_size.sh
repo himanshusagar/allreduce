@@ -30,14 +30,27 @@ python3 ~/dev/allreduce/recursive/main.py --master-ip 10.10.1.1 --num-nodes $W_S
 echo "Start of script..."
 KB=1024
 STEPSIZE=$((KB*512))
+STEPSIZE=$((STEPSIZE-1))
 
 MB=$((KB*KB))
+TenMB=$(($MB*10))
 HundredMB=$(($MB*100))
 
-WORLD_SIZE=16
-PORT_VAL=7581
 
-for tensor_size in `seq $KB $STEPSIZE $HundredMB`; do
+WORLD_SIZE=16
+PORT_VAL=6581
+
+for i in 1 2 4 8 16 32 128 256 512; do
+      tensor_size=$(( $KB * $i))
+      #echo "$tensor_size $i"
+      run_func $tensor_size $WORLD_SIZE $PORT_VAL
+      PORT_VAL=$((PORT_VAL+2))
+done
+
+
+for i in 1 10 20 40 60 80 100 ; do
+      tensor_size=$(( $MB * $i))
+      #echo "$tensor_size $i"
       run_func $tensor_size $WORLD_SIZE $PORT_VAL
       PORT_VAL=$((PORT_VAL+2))
 done
