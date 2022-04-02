@@ -178,4 +178,5 @@ if __name__ == "__main__":
     init_process(master_ip=args.master_ip,
                  rank=args.rank,
                  world_size=args.num_nodes)
+    print(args.tensor_size)
     main(tensor_size=args.tensor_size)
