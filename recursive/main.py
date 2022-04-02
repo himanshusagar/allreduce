@@ -107,7 +107,7 @@ class RecursiveAllReduce(BaseClass):
                 e = time.time()
             #print("Finished recv in total ", recv_buffers);
             toPrint = ""
-            toPrint += str(self.TENSOR_SIZE) + "," + str(self.calc(recv_buffers));
+            toPrint += str(self.TENSOR_SIZE) + "," + str(self.WORLD_SIZE) + "," + str(self.calc(recv_buffers));
             print( toPrint )
         else:
             tmp_list = self.get_tmp_list()
