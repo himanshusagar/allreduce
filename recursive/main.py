@@ -13,7 +13,7 @@ DEBUG = False
 class RecursiveAllReduce(BaseClass):
     def __init__(self, tensor_size, world_size, master_ip , rank):
         super().__init__(tensor_size, world_size)
-        self.globalTensor = torch.zeros(self.TENSOR_SIZE)
+        self.globalTensor = torch.rand(self.TENSOR_SIZE)
         self.init_process(master_ip , rank, world_size);
 
 
@@ -23,8 +23,6 @@ class RecursiveAllReduce(BaseClass):
                                 rank=rank,
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
-        for i in range(self.TENSOR_SIZE):
-            self.globalTensor[i] = i
         if(DEBUG):
             print("Initial Tensor " , self.my_rank , self.globalTensor)
 
