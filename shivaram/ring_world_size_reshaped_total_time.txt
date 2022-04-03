@@ -1,0 +1,274 @@
+[1] 01:33:00 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28410
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[2] 01:33:00 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28412
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[3] 01:33:00 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28412
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[4] 01:33:00 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28413
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[5] 01:33:00 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28412
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[6] 01:33:00 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28410
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[7] 01:33:00 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28412
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[8] 01:33:00 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28413
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[9] 01:33:00 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28411
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[10] 01:33:00 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28410
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[11] 01:33:00 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28411
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[12] 01:33:00 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28413
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[13] 01:33:00 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28411
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[14] 01:33:00 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28411
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+[15] 01:33:00 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28410
+Updating a590783..b4c7aa3
+Fast-forward
+ network_reshape.sh                        |   1 +
+ shivaram/ring.py                          |   8 --
+ shivaram/ring_tensor_size_recv.txt        |   2 +
+ shivaram/ring_total_time_tensor_sizes.txt | 121 ++++++++++++++++++
+ shivaram/ring_total_time_world_sizes.txt  | 198 ++++++++++++++++++++++++++++++
+ shivaram/ring_world_size.txt              | 106 +---------------
+ shivaram/ring_world_size_new.txt          | 167 +++++++++++++++++++++++++
+ shivaram/task2.sh                         |  11 +-
+ 8 files changed, 491 insertions(+), 123 deletions(-)
+ create mode 100644 network_reshape.sh
+ create mode 100644 shivaram/ring_total_time_tensor_sizes.txt
+ create mode 100644 shivaram/ring_total_time_world_sizes.txt
+ create mode 100644 shivaram/ring_world_size_new.txt
+Stderr: From https://github.com/himanshusagar/allreduce
+   a590783..b4c7aa3  main       -> origin/main
+Tensor size :  10485760  World size(average over this) :  2  , Total AllReduce time across all VMs :  650.2027587890625
+Tensor size :  10485760  World size(average over this) :  4  , Total AllReduce time across all VMs :  1816.8218994140625
+Tensor size :  10485760  World size(average over this) :  8  , Total AllReduce time across all VMs :  4290.22607421875
+Tensor size :  10485760  World size(average over this) :  16  , Total AllReduce time across all VMs :  8898.2421875
