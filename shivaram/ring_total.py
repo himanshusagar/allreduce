@@ -16,7 +16,7 @@ def init_process(master_ip, port, rank, world_size):
 def ring_gather(t, comm_size, world_size, me, prev, _next_):
     curi = me
     for i in range(0, world_size-1):
-        if(me%2 == 0):
+        if(me == 0):
             send_buf = torch.zeros(comm_size)
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
@@ -59,7 +59,7 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
     if(curi >= world_size):
         curi = 0;
     for i in range(0, world_size-1):
-        if(me%2 == 0):
+        if(me == 0):
             send_buf = torch.zeros(comm_size)
             for idx in range(0,comm_size):
                 send_buf[idx]=t[curi*comm_size + idx]
