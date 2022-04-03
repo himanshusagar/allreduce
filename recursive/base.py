@@ -11,6 +11,7 @@ class BaseClass:
         self.SECTION_SIZE = int(self.TENSOR_SIZE / self.WORLD_SIZE)  # 64
         self.send_time = []
         self.recv_time = []
+        self.tot_time = []
 
     def calc(self , tmp_list):
         return np.mean(tmp_list);
@@ -18,7 +19,7 @@ class BaseClass:
     def get_tmp_list(self):
         #tmp_list = self.send_time;
         # tmp_list.extend(self.recv_time)
-        return self.send_time
+        return self.tot_time
 
     def partner_index(self, rank, mid, size):
         if (rank <= mid):
