@@ -45,14 +45,14 @@ class RecursiveAllReduce(BaseClass):
         #self.send_time.append(e - s);
 
 
-    def recvTensors(self, partner_rank, begin , end):
+    def recvTensors(self, partner_rank, begin , end, assign):
         partner_size = end - begin + 1
         partner_section_tensor = torch.zeros(partner_size)
         #s = time.time()
         dist.recv(partner_section_tensor, src=partner_rank)
         #e = time.time()
         #self.recv_time.append(e - s)
-        self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor)
+        self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor, assign)
         #if (DEBUG):
         #    print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
 
@@ -65,9 +65,9 @@ class RecursiveAllReduce(BaseClass):
 
         if (self.my_rank <= mid):
             self.sendTensors(partner_rank , mid + 1  , right)
-            self.recvTensors(partner_rank , left , mid)
+            self.recvTensors(partner_rank , left , mid, False)
         else:
-            self.recvTensors(partner_rank ,  mid + 1 , right)
+            self.recvTensors(partner_rank ,  mid + 1 , right, False)
             self.sendTensors(partner_rank , left , mid)
 
         if(self.my_rank <= mid):
@@ -89,9 +89,9 @@ class RecursiveAllReduce(BaseClass):
 
         if(self.my_rank <= mid):
             self.sendTensors(partner_rank, left, mid)
-            self.recvTensors(partner_rank, mid + 1, right)
+            self.recvTensors(partner_rank, mid + 1, right, True)
         else:
-            self.recvTensors(partner_rank, left, mid)
+            self.recvTensors(partner_rank, left, mid, True)
             self.sendTensors(partner_rank , mid + 1  , right)
 
 
