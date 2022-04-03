@@ -23,6 +23,8 @@ class RecursiveAllReduce(BaseClass):
                                 rank=rank,
                                 world_size=world_size)
         self.my_rank = dist.get_rank()
+        for i in range(self.TENSOR_SIZE):
+            self.globalTensor[i] = i
         if(DEBUG):
             print("Initial Tensor " , self.my_rank , self.globalTensor)
 
