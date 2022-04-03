@@ -100,14 +100,14 @@ class RecursiveAllReduce(BaseClass):
         if dist.get_rank() == 0:
             tmp_list = self.get_tmp_list()
             recv_buffers = [torch.zeros(1) for i in range(0, dist.get_world_size())]
-            recv_buffers[0] = self.calc(tmp_list);
+            recv_buffers[0] = self.take_sum(tmp_list);
             for i in range(1, dist.get_world_size()):
                 s = time.time()
                 dist.recv(recv_buffers[i], src=i)
                 e = time.time()
             #print("Finished recv in total ", recv_buffers);
             toPrint = ""
-            toPrint += str(self.TENSOR_SIZE) + "," + str(self.WORLD_SIZE) + "," + str(self.calc(recv_buffers));
+            toPrint += str(self.TENSOR_SIZE) + "," + str(self.WORLD_SIZE) + "," + str(self.take_sum(recv_buffers));
             print( toPrint )
         else:
             tmp_list = self.get_tmp_list()
