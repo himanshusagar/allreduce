@@ -1,0 +1,285 @@
+[1] 14:36:23 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28410
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[2] 14:36:23 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28412
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[3] 14:36:23 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28412
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[4] 14:36:23 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28413
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[5] 14:36:23 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28411
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[6] 14:36:23 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28412
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[7] 14:36:23 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28412
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[8] 14:36:23 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28413
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[9] 14:36:23 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28413
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[10] 14:36:23 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28410
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[11] 14:36:23 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28410
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[12] 14:36:23 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28411
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[13] 14:36:23 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28411
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[14] 14:36:23 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28410
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+[15] 14:36:23 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28411
+Updating 56a0827..5bd496c
+Fast-forward
+ shivaram/ring.py  | 12 +++++++++---
+ shivaram/task1.sh |  4 ++--
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   56a0827..5bd496c  main       -> origin/main
+Tensor size :  1024  World size :  16  , Average recv time across all VMs :  0.005230110604315996
+Tensor size :  2048  World size :  16  , Average recv time across all VMs :  0.007536643650382757
+Tensor size :  4096  World size :  16  , Average recv time across all VMs :  0.012036388739943504
+Tensor size :  8192  World size :  16  , Average recv time across all VMs :  0.019777365028858185
+Tensor size :  16384  World size :  16  , Average recv time across all VMs :  0.029974717646837234
+Tensor size :  32768  World size :  16  , Average recv time across all VMs :  0.047330617904663086
+Tensor size :  65536  World size :  16  , Average recv time across all VMs :  0.0821630135178566
+Tensor size :  262144  World size :  16  , Average recv time across all VMs :  0.34952810406684875
+Tensor size :  524288  World size :  16  , Average recv time across all VMs :  0.7972785234451294
+Tensor size :  1048576  World size :  16  , Average recv time across all VMs :  1.7025128602981567
+Tensor size :  2097152  World size :  16  , Average recv time across all VMs :  2.9468700885772705
+Tensor size :  4194304  World size :  16  , Average recv time across all VMs :  4.903780460357666
+Tensor size :  8388608  World size :  16  , Average recv time across all VMs :  8.656453132629395
+Tensor size :  16777216  World size :  16  , Average recv time across all VMs :  16.060583114624023
+Tensor size :  33554432  World size :  16  , Average recv time across all VMs :  31.407331466674805
+[1] 18:51:16 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28412
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[2] 18:51:16 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28411
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[3] 18:51:16 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28412
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[4] 18:51:16 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28410
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[5] 18:51:16 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28413
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[6] 18:51:16 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28412
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[7] 18:51:16 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28412
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[8] 18:51:16 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28411
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[9] 18:51:16 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28410
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[10] 18:51:17 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28410
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[11] 18:51:17 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28413
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[12] 18:51:17 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28411
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[13] 18:51:17 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28410
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[14] 18:51:17 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28411
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
+[15] 18:51:17 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28413
+Updating 5bd496c..c69057f
+Fast-forward
+ recursive/base.py           | 2 +-
+ recursive/main.py           | 3 +--
+ recursive/run_node_count.sh | 2 +-
+ shivaram/task1.sh           | 3 ++-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   5bd496c..c69057f  main       -> origin/main
