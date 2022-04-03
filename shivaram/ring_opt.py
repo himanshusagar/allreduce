@@ -99,8 +99,8 @@ def ring_scatter(t, comm_size, world_size, me, prev, _next_):
 def main(tensor_size):
     # Create a random tensor
     t = torch.rand(tensor_size)
-    for i in range(0,tensor_size):
-        t[i]=i
+#   for i in range(0,tensor_size):
+#        t[i]=i
     # indices to send and receive from
     me = dist.get_rank()
     world_size = dist.get_world_size()
