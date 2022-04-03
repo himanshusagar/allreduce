@@ -1,5 +1,4 @@
 
-from sympy import symbols, Eq, solve
 from math import log2
 import numpy as np
 
@@ -16,9 +15,6 @@ def getAlphaBeta(p , n):
     betaCoeff = gammaCoeff * 2
     return np.array([alphaCoeff , betaCoeff]);
 
-# defining symbols used in equations
-# or unknown variables
-alpha, beta = symbols('alpha beta')
 
 A = np.array([ getAlphaBeta( 16 , 67108864) ,
                getAlphaBeta( 16 , 16777216) ])
