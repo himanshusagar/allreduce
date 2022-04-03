@@ -28,8 +28,8 @@ do
 	for i in `seq 1 $j_lim`
 	do
 		RANK=$i
-        	ssh -f a$i "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p 6005  --num-nodes $k --rank $RANK"
+        	ssh -f a$i "nohup python3 /users/hsagar/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p 6005  --num-nodes $j --rank $RANK"
 	done
-	python3 ~/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p 6005 --num-nodes $k --rank 0
+	python3 ~/allreduce/shivaram/ring.py -t $T_SIZE --master-ip 10.10.1.1 -p 6005 --num-nodes $j --rank 0
 done
 
