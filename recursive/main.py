@@ -98,7 +98,7 @@ class RecursiveAllReduce(BaseClass):
         if dist.get_rank() == 0:
             tmp_list = self.get_tmp_list()
             recv_buffers = [torch.zeros(1) for i in range(0, dist.get_world_size())]
-            recv_buffers[0] = self.take_sum(tmp_list);
+            recv_buffers[0] = self.take_sum(tmp_list)
             for i in range(1, dist.get_world_size()):
                 s = time.time()
                 dist.recv(recv_buffers[i], src=i)
@@ -118,14 +118,14 @@ class RecursiveAllReduce(BaseClass):
         self.reduce_scatter(0, self.WORLD_SIZE - 1)
         e = time.time();
         self.tot_time.append(e - s);
-        self.clearNonPortion()
-        backup = torch.clone(self.globalTensor)
+        #self.clearNonPortion()
+        #backup = torch.clone(self.globalTensor)
         s = time.time()
         self.all_gather(0, self.WORLD_SIZE - 1)
         e = time.time()
         self.tot_time.append(e - s);
-        if(DEBUG):
-            print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
+        #if(DEBUG):
+        #    print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
         self.accumulate()
 
 
