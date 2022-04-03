@@ -111,7 +111,7 @@ class RecursiveAllReduce(BaseClass):
             print( toPrint )
         else:
             tmp_list = self.get_tmp_list()
-            t[0] = self.calc(tmp_list);
+            t[0] = self.take_sum(tmp_list);
             dist.send(t, dst=0)
 
 

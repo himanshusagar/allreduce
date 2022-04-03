@@ -13,8 +13,8 @@ class BaseClass:
         self.recv_time = []
         self.tot_time = []
 
-    def calc(self , tmp_list):
-        return np.mean(tmp_list);
+    # def calc(self , tmp_list):
+    #     return np.mean(tmp_list);
 
     def take_sum(self , tmp_list):
         return np.sum(tmp_list);
