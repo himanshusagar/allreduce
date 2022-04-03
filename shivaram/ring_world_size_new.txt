@@ -1,0 +1,167 @@
+[1] 22:04:25 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28411
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[2] 22:04:25 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28412
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[3] 22:04:25 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28412
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[4] 22:04:25 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28410
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[5] 22:04:25 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28412
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[6] 22:04:25 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28412
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[7] 22:04:26 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28413
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[8] 22:04:26 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28410
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[9] 22:04:26 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28413
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[10] 22:04:26 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28411
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[11] 22:04:26 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28410
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[12] 22:04:26 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28413
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[13] 22:04:26 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28411
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[14] 22:04:26 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28410
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+[15] 22:04:26 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28411
+Updating ae6eca3..7fed2a5
+Fast-forward
+ recursive/eq_solver.py       | 12 +++++++-----
+ recursive/run_tensor_size.sh |  2 +-
+ shivaram/ring_solver.py      | 29 +++++++++++++++++++++++++++++
+ shivaram/task2.sh            |  4 ++--
+ 4 files changed, 39 insertions(+), 8 deletions(-)
+ create mode 100644 shivaram/ring_solver.py
+Stderr: From https://github.com/himanshusagar/allreduce
+   ae6eca3..7fed2a5  main       -> origin/main
+Tensor size :  10485760  World size :  4  , Average recv time across all VMs :  40.18040084838867
+Tensor size :  10485760  World size :  8  , Average recv time across all VMs :  21.286771774291992

@@ -283,3 +283,5 @@ Fast-forward
  4 files changed, 5 insertions(+), 5 deletions(-)
 Stderr: From https://github.com/himanshusagar/allreduce
    5bd496c..c69057f  main       -> origin/main
+Tensor size :  67108864  World size :  16  , Average recv time across all VMs :  64.36937713623047
+Tensor size :  134217728  World size :  16  , Average recv time across all VMs :  121.8778305053711

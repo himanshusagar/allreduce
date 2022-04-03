@@ -1,0 +1,121 @@
+[1] 23:54:48 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28410
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[2] 23:54:48 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28412
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[3] 23:54:48 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28412
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[4] 23:54:48 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28413
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[5] 23:54:48 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28411
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[6] 23:54:48 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28413
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[7] 23:54:48 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28412
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[8] 23:54:48 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28410
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[9] 23:54:48 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28411
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[10] 23:54:48 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28411
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[11] 23:54:48 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28413
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[12] 23:54:48 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28412
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[13] 23:54:48 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28411
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[14] 23:54:48 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28410
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+[15] 23:54:48 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28410
+Updating 1ab3925..a590783
+Fast-forward
+ shivaram/task1.sh | 36 ++++--------------------------------
+ 1 file changed, 4 insertions(+), 32 deletions(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   1ab3925..a590783  main       -> origin/main
+Tensor size :  1024  World size(average over this) :  16  , Total AllReduce time across all VMs :  3.702582597732544
+Tensor size :  2048  World size(average over this) :  16  , Total AllReduce time across all VMs :  5.207067489624023
+Tensor size :  4096  World size(average over this) :  16  , Total AllReduce time across all VMs :  9.193387031555176
+Tensor size :  8192  World size(average over this) :  16  , Total AllReduce time across all VMs :  17.500165939331055
+Tensor size :  16384  World size(average over this) :  16  , Total AllReduce time across all VMs :  28.5286865234375
+Tensor size :  32768  World size(average over this) :  16  , Total AllReduce time across all VMs :  53.03726577758789
+Tensor size :  65536  World size(average over this) :  16  , Total AllReduce time across all VMs :  104.05535125732422
+Tensor size :  131072  World size(average over this) :  16  , Total AllReduce time across all VMs :  227.27734375
+Tensor size :  262144  World size(average over this) :  16  , Total AllReduce time across all VMs :  608.48583984375
+Tensor size :  524288  World size(average over this) :  16  , Total AllReduce time across all VMs :  1086.9765625
+Tensor size :  1048576  World size(average over this) :  16  , Total AllReduce time across all VMs :  1943.0882568359375
+Tensor size :  2097152  World size(average over this) :  16  , Total AllReduce time across all VMs :  3470.094970703125
+Tensor size :  4194304  World size(average over this) :  16  , Total AllReduce time across all VMs :  6323.48486328125
+Tensor size :  8388608  World size(average over this) :  16  , Total AllReduce time across all VMs :  11505.2685546875
+Tensor size :  16777216  World size(average over this) :  16  , Total AllReduce time across all VMs :  18286.98828125
+Tensor size :  33554432  World size(average over this) :  16  , Total AllReduce time across all VMs :  33761.859375
