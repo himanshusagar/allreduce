@@ -1,0 +1,105 @@
+[1] 14:14:30 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28410
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[2] 14:14:30 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28412
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[3] 14:14:30 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28412
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[4] 14:14:30 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28411
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[5] 14:14:30 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28412
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[6] 14:14:30 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28412
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[7] 14:14:30 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28413
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[8] 14:14:30 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28413
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[9] 14:14:30 [SUCCESS] hsagar@c220g5-110431.wisc.cloudlab.us:28410
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[10] 14:14:30 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28413
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[11] 14:14:30 [SUCCESS] hsagar@c220g5-110423.wisc.cloudlab.us:28411
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[12] 14:14:30 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28410
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[13] 14:14:30 [SUCCESS] hsagar@c220g5-110401.wisc.cloudlab.us:28411
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[14] 14:14:30 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28411
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
+[15] 14:14:30 [SUCCESS] hsagar@c220g5-110430.wisc.cloudlab.us:28410
+Updating 04d6852..56a0827
+Fast-forward
+ shivaram/task1.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Stderr: From https://github.com/himanshusagar/allreduce
+   04d6852..56a0827  main       -> origin/main
