@@ -18,13 +18,12 @@ def getAlphaBeta(p , n):
 
 # defining symbols used in equations
 # or unknown variables
-alpha, beta = symbols('alpha beta' )
-
+alpha, beta = symbols('alpha beta')
 
 A = np.array([ getAlphaBeta( 16 , 67108864) ,
                getAlphaBeta( 16 , 16777216) ])
 
-b = np.array([ 32.2343047 , 49.32134488 ])
+b = np.array([ 49.32134488 , 32.2343047 ])
 
 print(np.linalg.solve(A, b))
 
