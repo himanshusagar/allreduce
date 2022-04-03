@@ -16,6 +16,9 @@ class BaseClass:
     def calc(self , tmp_list):
         return np.mean(tmp_list);
 
+    def take_sum(self , tmp_list):
+        return np.sum(tmp_list);
+
     def get_tmp_list(self):
         #tmp_list = self.send_time;
         # tmp_list.extend(self.recv_time)
