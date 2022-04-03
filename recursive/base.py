@@ -13,8 +13,8 @@ class BaseClass:
         self.recv_time = []
         self.tot_time = []
 
-    def calc(self , tmp_list):
-        return np.mean(tmp_list);
+    # def calc(self , tmp_list):
+    #     return np.mean(tmp_list);
 
     def take_sum(self , tmp_list):
         return np.sum(tmp_list);
@@ -33,12 +33,15 @@ class BaseClass:
     def section_tensor(self, wholeTensor, begin, end):
         return wholeTensor[begin: end + 1];
 
-    def perform_op_tensor(self, wholeTensor, begin, end, section_tensor):
+    def perform_op_tensor(self, wholeTensor, begin, end, section_tensor , assign):
         index = begin
         for i in range(end - begin + 1):
-            wholeTensor[index] += section_tensor[i];
+            if(assign):
+                wholeTensor[index] = section_tensor[i]
+            else:
+                wholeTensor[index] += section_tensor[i]
             index += 1
-        return wholeTensor;
+        return wholeTensor
 
     # def clearNonPortion(self, rank, opTensor):
     #     begin = rank * self.SECTION_SIZE
@@ -51,29 +54,6 @@ class BaseClass:
     #     return opTensor
 
 
-if __name__ == '__main__':
-
-    globalTensor = torch.zeros(TENSOR_SIZE)
-
-    for i in range(TENSOR_SIZE):
-        globalTensor[i] = i;
-
-    print("Global Tensor")
-    print(globalTensor)
-    rank = 2
-    print(partner_index(1 , rank , 5))
-    begin = 3;
-    end = 5;
-
-    partner_section = section_tensor(globalTensor, begin , end)
-    print("partner_section Tensor")
-    print(partner_section)
-    globalTensor = perform_op_tensor(globalTensor , begin , end , partner_section);
-    print("globalTensor" , globalTensor);
-
-    globalTensor = clearNonPortion(5 , globalTensor)
-
-    print("globalTensor" , globalTensor);
 
 
 

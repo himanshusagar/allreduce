@@ -13,7 +13,7 @@ DEBUG = False
 class RecursiveAllReduce(BaseClass):
     def __init__(self, tensor_size, world_size, master_ip , rank):
         super().__init__(tensor_size, world_size)
-        self.globalTensor = torch.zeros(self.TENSOR_SIZE)
+        self.globalTensor = torch.rand(self.TENSOR_SIZE)
         self.init_process(master_ip , rank, world_size);
 
 
@@ -45,14 +45,14 @@ class RecursiveAllReduce(BaseClass):
         #self.send_time.append(e - s);
 
 
-    def recvTensors(self, partner_rank, begin , end):
+    def recvTensors(self, partner_rank, begin , end, assign):
         partner_size = end - begin + 1
         partner_section_tensor = torch.zeros(partner_size)
         #s = time.time()
         dist.recv(partner_section_tensor, src=partner_rank)
         #e = time.time()
         #self.recv_time.append(e - s)
-        self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor)
+        self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor, assign)
         #if (DEBUG):
         #    print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
 
@@ -65,9 +65,9 @@ class RecursiveAllReduce(BaseClass):
 
         if (self.my_rank <= mid):
             self.sendTensors(partner_rank , mid + 1  , right)
-            self.recvTensors(partner_rank , left , mid)
+            self.recvTensors(partner_rank , left , mid, False)
         else:
-            self.recvTensors(partner_rank ,  mid + 1 , right)
+            self.recvTensors(partner_rank ,  mid + 1 , right, False)
             self.sendTensors(partner_rank , left , mid)
 
         if(self.my_rank <= mid):
@@ -89,9 +89,9 @@ class RecursiveAllReduce(BaseClass):
 
         if(self.my_rank <= mid):
             self.sendTensors(partner_rank, left, mid)
-            self.recvTensors(partner_rank, mid + 1, right)
+            self.recvTensors(partner_rank, mid + 1, right, True)
         else:
-            self.recvTensors(partner_rank, left, mid)
+            self.recvTensors(partner_rank, left, mid, True)
             self.sendTensors(partner_rank , mid + 1  , right)
 
 
@@ -100,7 +100,7 @@ class RecursiveAllReduce(BaseClass):
         if dist.get_rank() == 0:
             tmp_list = self.get_tmp_list()
             recv_buffers = [torch.zeros(1) for i in range(0, dist.get_world_size())]
-            recv_buffers[0] = self.take_sum(tmp_list);
+            recv_buffers[0] = self.take_sum(tmp_list)
             for i in range(1, dist.get_world_size()):
                 s = time.time()
                 dist.recv(recv_buffers[i], src=i)
@@ -111,7 +111,7 @@ class RecursiveAllReduce(BaseClass):
             print( toPrint )
         else:
             tmp_list = self.get_tmp_list()
-            t[0] = self.calc(tmp_list);
+            t[0] = self.take_sum(tmp_list);
             dist.send(t, dst=0)
 
 
@@ -120,14 +120,14 @@ class RecursiveAllReduce(BaseClass):
         self.reduce_scatter(0, self.WORLD_SIZE - 1)
         e = time.time();
         self.tot_time.append(e - s);
-        self.clearNonPortion()
-        backup = torch.clone(self.globalTensor)
+        #self.clearNonPortion()
+        #backup = torch.clone(self.globalTensor)
         s = time.time()
         self.all_gather(0, self.WORLD_SIZE - 1)
         e = time.time()
         self.tot_time.append(e - s);
-        if(DEBUG):
-            print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
+        #if(DEBUG):
+        #    print("End Tensor ", rec.my_rank, " after reduce_scatter", backup, " and all_gather ", rec.globalTensor)
         self.accumulate()
 
 
