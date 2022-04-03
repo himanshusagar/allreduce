@@ -10,18 +10,19 @@ import numpy as np
 
 def getAlphaBeta(p , n):
     p_1_div_p = (p-1)/p
-    alphaCoeff = 2 * log2(p)
-    #gammaCoeff = p_1_div_p * n
+    alphaCoeff = p * 2
     betaCoeff = p_1_div_p * n * 2
     return np.array([alphaCoeff , betaCoeff]);
 
-def recurse(val , p):
-    return log2(p) * val;
+def ringReduce(val , p):
+    return p * (p-1) * 2 * val;
 
-A = np.array([ getAlphaBeta( 16 , 33554432) ,
-               getAlphaBeta( 16 , 67108864) ])
 
-b = np.array([ recurse( 27.61999477, 16) , recurse( 49.32134488 , 16) ])
+A = np.array([ getAlphaBeta( 16 , 16777216) ,
+               getAlphaBeta( 16 , 33554432) ])
+
+b = np.array([ ringReduce(16.060583114624023, 16) ,
+               ringReduce(31.407331466674805 , 16) ])
 
 print(np.linalg.solve(A, b))
 
