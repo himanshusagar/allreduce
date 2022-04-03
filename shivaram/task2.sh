@@ -13,7 +13,7 @@ k=10
 T_SIZE=$((k*KB))
 T_SIZE=$((T_SIZE*KB))
 incr=1
-for j in 16
+for j in 2 4 8 16
 do
 	j_lim=$((j-incr))
 	for i in `seq 1 $j_lim`
