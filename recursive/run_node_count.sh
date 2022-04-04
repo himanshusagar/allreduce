@@ -35,5 +35,4 @@ tensor_size=$TenMB
 
 for WORLD_SIZE in 2 4 8 16; do
       run_func $tensor_size $WORLD_SIZE $PORT_VAL
-      PORT_VAL=$((PORT_VAL+2))
 done
