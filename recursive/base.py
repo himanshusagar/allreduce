@@ -29,7 +29,7 @@ class BaseClass:
             return rank + floor(size / 2);
         else:
             return rank - floor(size / 2)
-
+'''
     def section_tensor(self, wholeTensor, begin, end):
         return wholeTensor[begin: end + 1]
 
@@ -59,6 +59,7 @@ class BaseClass:
     #         else:
     #             opTensor[i] = 0
     #     return opTensor
+'''
 
 
 

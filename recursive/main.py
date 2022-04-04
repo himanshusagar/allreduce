@@ -38,9 +38,9 @@ class RecursiveAllReduce(BaseClass):
                 self.globalTensor[i] = 0
 
     def sendTensors(self , partner_rank, begin , end):
-        my_section_tensor = self.section_tensor(self.globalTensor, begin  , end)
+        #my_section_tensor = self.section_tensor(begin  , end)
         #s = time.time()
-        dist.send(my_section_tensor, dst=partner_rank)
+        dist.send(self.globalTensor[begin: end + 1], dst=partner_rank)
         #e = time.time()
         #self.send_time.append(e - s);
 
@@ -52,7 +52,11 @@ class RecursiveAllReduce(BaseClass):
         dist.recv(partner_section_tensor, src=partner_rank)
         #e = time.time()
         #self.recv_time.append(e - s)
-        self.globalTensor = self.perform_op_tensor(self.globalTensor, begin , end , partner_section_tensor, assign)
+        if (assign):
+            self.globalTensor[begin:end + 1] = partner_section_tensor
+        else:
+            self.globalTensor[begin:end + 1] += partner_section_tensor
+
         #if (DEBUG):
         #    print("Finished send recv from ", partner_rank, " at b = ", begin , "end =" , end , "in ", e - s, " seconds ", self.globalTensor)
 
