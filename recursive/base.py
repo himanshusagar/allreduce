@@ -31,17 +31,24 @@ class BaseClass:
             return rank - floor(size / 2)
 
     def section_tensor(self, wholeTensor, begin, end):
-        return wholeTensor[begin: end + 1];
+        return wholeTensor[begin: end + 1]
 
     def perform_op_tensor(self, wholeTensor, begin, end, section_tensor , assign):
-        index = begin
-        for i in range(end - begin + 1):
-            if(assign):
-                wholeTensor[index] = section_tensor[i]
-            else:
-                wholeTensor[index] += section_tensor[i]
-            index += 1
-        return wholeTensor
+        if(assign):
+            wholeTensor[begin:end + 1] = section_tensor
+            return wholeTensor
+        else:
+            wholeTensor[begin:end + 1] += section_tensor
+            return wholeTensor
+
+        # index = begin
+        # for i in range(end - begin + 1):
+        #     if(assign):
+        #         wholeTensor[index] = section_tensor[i]
+        #     else:
+        #         wholeTensor[index] += section_tensor[i]
+        #     index += 1
+        # return wholeTensor
 
     # def clearNonPortion(self, rank, opTensor):
     #     begin = rank * self.SECTION_SIZE
