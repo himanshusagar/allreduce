@@ -118,6 +118,7 @@ def main(tensor_size):
     ring_scatter(t, comm_size, world_size, me, prev, _next_)
     e=time.time()
 
+    print(e-s)
     times_buf = torch.zeros(1)
     times_buf[0] = e-s
     if(me != 0):
