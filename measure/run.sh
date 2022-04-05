@@ -6,6 +6,8 @@
 
 #python3 main.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0 
 
+parallel-ssh -i -h ~/followers "cd dev && cd allreduce && git pull"
+
 for i in `seq 1 15`
 do
         RANK=$i
