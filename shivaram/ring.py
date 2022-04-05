@@ -172,7 +172,7 @@ def main(tensor_size):
         for i  in range(1,world_size):
             dist.recv(all_times_buf[0][i], src=i)
 
-        print("Tensor size : ", tensor_size, " World size : " , world_size, " , Average recv time across all VMs : ", all_times_buf)
+        print("Tensor size : ", tensor_size, " World size : " , world_size, " , All reduce total time for all VMs : ", all_times_buf)
 
 
 if __name__ == "__main__":
