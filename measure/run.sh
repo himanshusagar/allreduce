@@ -15,4 +15,4 @@ do
         ssh -f a$i "nohup python3 /users/hsagar/allreduce/shivaram/main.py --master-ip 10.10.1.1 --num-nodes 16 --rank $RANK"
 done
 
-python3 main.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0
+python3 main.py --master-ip 10.10.1.1 --num-nodes 16 --rank 0 &
