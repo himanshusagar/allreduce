@@ -14,124 +14,133 @@ def init_process(master_ip, port, rank, world_size):
                             world_size=world_size)
 
 def ring_gather(t, comm_size, world_size, me, prev, _next_):
-    send_times = torch.zeros(world_size-1)
-    recv_times = torch.zeros(world_size-1)
+#    send_times = torch.zeros(world_size-1)
+#    recv_times = torch.zeros(world_size-1)
     curi = me
     for i in range(0, world_size-1):
         if(me%2 == 0):
             send_buf = torch.zeros(comm_size)
-            for idx in range(0,comm_size):
-                send_buf[idx]=t[curi*comm_size + idx]
-            s=time.time()
+            send_buf = t[(curi*comm_size) : ((curi+1)*comm_size)]
+#            for idx in range(0,comm_size):
+#                send_buf[idx]=t[curi*comm_size + idx]
+#            s=time.time()
             dist.send(send_buf, dst=_next_)
-            e=time.time()
-            send_times[i] = e-s
+#            e=time.time()
+#            send_times[i] = e-s
 
             recv_buf = torch.zeros(comm_size)
-            s=time.time()
+#            s=time.time()
             dist.recv(recv_buf, src=prev)
-            e=time.time()
-            recv_times[i] = e-s
-            k = 0
+#            e=time.time()
+#            recv_times[i] = e-s
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
-            for j in range(curi*comm_size, (curi+1)*comm_size):
-                t[j] = t[j]+recv_buf[k]
-                k=k+1
+            t[(curi*comm_size) : ((curi+1)*comm_size)] += recv_buf
+#            k = 0
+#            for j in range(curi*comm_size, (curi+1)*comm_size):
+#                t[j] = t[j]+recv_buf[k]
+#                k=k+1
         else:
             recv_buf = torch.zeros(comm_size)
-            s=time.time()
+#            s=time.time()
             dist.recv(recv_buf, src=prev)
-            e=time.time()
-            recv_times[i] = e-s
-            k = 0
+#            e=time.time()
+#            recv_times[i] = e-s
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
-            for j in range(curi*comm_size, (curi+1)*comm_size):
-                t[j] = t[j]+recv_buf[k]
-                k=k+1
+            t[(curi*comm_size) : ((curi+1)*comm_size)] += recv_buf
+#            k = 0
+#            for j in range(curi*comm_size, (curi+1)*comm_size):
+#                t[j] = t[j]+recv_buf[k]
+#                k=k+1
 
             curi = curi+1
             if (curi >= world_size):
                 curi = 0
             send_buf = torch.zeros(comm_size)
-            for idx in range(0,comm_size):
-                send_buf[idx]=t[curi*comm_size + idx]
-            s=time.time()
+            send_buf = t[(curi*comm_size) : ((curi+1)*comm_size)]
+#            for idx in range(0,comm_size):
+#                send_buf[idx]=t[curi*comm_size + idx]
+#            s=time.time()
             dist.send(send_buf, dst=_next_)
-            e=time.time()
-            send_times[i] = e-s
+#            e=time.time()
+#            send_times[i] = e-s
 #            print("Finished send to ", _next_, " in ", e - s, " seconds ")
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
 
-    return torch.mean(recv_times).item()
+#    return torch.mean(recv_times).item()
 
 
 def ring_scatter(t, comm_size, world_size, me, prev, _next_):
-    send_times = torch.zeros(world_size-1)
-    recv_times= torch.zeros(world_size-1)
+#    send_times = torch.zeros(world_size-1)
+#    recv_times= torch.zeros(world_size-1)
     curi = me+1
     if(curi >= world_size):
         curi = 0;
     for i in range(0, world_size-1):
         if(me%2 == 0):
             send_buf = torch.zeros(comm_size)
-            for idx in range(0,comm_size):
-                send_buf[idx]=t[curi*comm_size + idx]
-            s=time.time()
+            send_buf = t[(curi*comm_size) : ((curi+1)*comm_size)]
+#            for idx in range(0,comm_size):
+#                send_buf[idx]=t[curi*comm_size + idx]
+#            s=time.time()
             dist.send(send_buf, dst=_next_)
-            e=time.time()
-            send_times[i] = e-s
+#            e=time.time()
+#            send_times[i] = e-s
 
             recv_buf = torch.zeros(comm_size)
-            s=time.time()
+#            s=time.time()
             dist.recv(recv_buf, src=prev)
-            e=time.time()
-            recv_times[i] = e-s
-            k = 0
+#            e=time.time()
+#            recv_times[i] = e-s
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
-            for j in range(curi*comm_size, (curi+1)*comm_size):
-                t[j] = recv_buf[k]
-                k=k+1
+            t[(curi*comm_size) : ((curi+1)*comm_size)] = recv_buf
+#            k = 0
+#            for j in range(curi*comm_size, (curi+1)*comm_size):
+#                t[j] = recv_buf[k]
+#                k=k+1
         else:
             recv_buf = torch.zeros(comm_size)
-            s=time.time()
+#            s=time.time()
             dist.recv(recv_buf, src=prev)
-            e=time.time()
-            recv_times[i] = e-s
+#            e=time.time()
+#            recv_times[i] = e-s
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
-            k = 0
-            for j in range(curi*comm_size, (curi+1)*comm_size):
-                t[j] = recv_buf[k]
-                k=k+1
+            t[(curi*comm_size) : ((curi+1)*comm_size)] = recv_buf
+#            k = 0
+#            for j in range(curi*comm_size, (curi+1)*comm_size):
+#                t[j] = recv_buf[k]
+#                k=k+1
 
             curi = curi+1
             if (curi >= world_size):
                 curi = 0
             send_buf = torch.zeros(comm_size)
-            for idx in range(0,comm_size):
-                send_buf[idx]=t[curi*comm_size + idx]
-            s=time.time()
+            send_buf = t[(curi*comm_size) : ((curi+1)*comm_size)]
+#            for idx in range(0,comm_size):
+#                send_buf[idx]=t[curi*comm_size + idx]
+#            s=time.time()
             dist.send(send_buf, dst=_next_)
-            e=time.time()
-            send_times[i] = e-s
+#            e=time.time()
+#            send_times[i] = e-s
             curi = curi-1
             if(curi < 0):
                 curi = world_size-1
 
-    return torch.mean(recv_times).item()
+#    return torch.mean(recv_times).item()
 
 
 def main(tensor_size):
     # Create a random tensor
+    numpy.set_printoptions(threshold=10_000)
     t = torch.rand(tensor_size)
     for i in range(0,tensor_size):
         t[i]=i
@@ -146,13 +155,14 @@ def main(tensor_size):
     _next_ = me+1
     if(_next_ >= world_size):
         _next_ = 0
-#    print("Starting ring reduce....")
-    gather_mean = ring_gather(t, comm_size, world_size, me, prev, _next_)
-    scatter_mean = ring_scatter(t, comm_size, world_size, me, prev, _next_)
-#    print("Finished")
+        
+    s=time.time()
+    ring_gather(t, comm_size, world_size, me, prev, _next_)
+    ring_scatter(t, comm_size, world_size, me, prev, _next_)
+    e=time.time()
 
     times_buf = torch.zeros(1)
-    times_buf[0] = (gather_mean + scatter_mean)/2
+    times_buf[0] = e-s
     if(me != 0):
         dist.send(times_buf, dst=0)
     else:
@@ -161,8 +171,7 @@ def main(tensor_size):
         for i  in range(1,world_size):
             dist.recv(all_times_buf[0][i], src=i)
 
-        mean_time = torch.mean(all_times_buf)
-        print("Tensor size : ", tensor_size, " World size : " , world_size, " , Average recv time across all VMs : ", mean_time.item())
+        print("Tensor size : ", tensor_size, " World size : " , world_size, " , Average recv time across all VMs : ", all_times_buf)
 
 
 if __name__ == "__main__":
