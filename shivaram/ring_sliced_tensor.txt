@@ -1,0 +1,160 @@
+[1] 03:40:56 [SUCCESS] node10
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[2] 03:40:56 [SUCCESS] node1
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[3] 03:40:56 [SUCCESS] node3
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[4] 03:40:56 [SUCCESS] node9
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[5] 03:40:56 [SUCCESS] node2
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[6] 03:40:56 [SUCCESS] node11
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[7] 03:40:56 [SUCCESS] node4
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[8] 03:40:56 [SUCCESS] node7
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[9] 03:40:56 [SUCCESS] node6
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[10] 03:40:56 [SUCCESS] node8
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[11] 03:40:57 [SUCCESS] node5
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[12] 03:40:57 [SUCCESS] node12
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[13] 03:40:57 [SUCCESS] node13
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[14] 03:40:57 [SUCCESS] node15
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+[15] 03:40:57 [SUCCESS] node14
+Updating 067fa8d..ae6dea2
+Fast-forward
+ shivaram/ring.py  | 2 +-
+ shivaram/task1.sh | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Stderr: From github.com:himanshusagar/allreduce
+   067fa8d..ae6dea2  ring_diff_imple -> origin/ring_diff_imple
+Tensor size :  1024  World size :  16  , All reduce total time for all VMs :  tensor([[0.2208, 0.1966, 0.1663, 0.1424, 0.1273, 0.1341, 0.1157, 0.0997, 0.1013,
+         0.0907, 0.0831, 0.0846, 0.0620, 0.0573, 0.0568, 0.0454]])
+Tensor size :  2048  World size :  16  , All reduce total time for all VMs :  tensor([[0.2224, 0.1771, 0.2047, 0.1659, 0.1464, 0.1534, 0.1176, 0.1064, 0.1053,
+         0.1018, 0.0747, 0.0808, 0.0649, 0.0467, 0.0600, 0.0484]])
+Tensor size :  4096  World size :  16  , All reduce total time for all VMs :  tensor([[0.1990, 0.1568, 0.1719, 0.1496, 0.1305, 0.1342, 0.1041, 0.0928, 0.0775,
+         0.0877, 0.0532, 0.0600, 0.0506, 0.0618, 0.0462, 0.0498]])
+Tensor size :  8192  World size :  16  , All reduce total time for all VMs :  tensor([[0.2275, 0.1654, 0.1947, 0.1692, 0.1511, 0.1504, 0.1238, 0.1118, 0.1178,
+         0.0909, 0.0471, 0.0906, 0.0877, 0.0438, 0.0670, 0.0583]])
+Tensor size :  16384  World size :  16  , All reduce total time for all VMs :  tensor([[0.2032, 0.0951, 0.1698, 0.1505, 0.1408, 0.0957, 0.1107, 0.0899, 0.0966,
+         0.0779, 0.0631, 0.0566, 0.0468, 0.0628, 0.0585, 0.0500]])
+Tensor size :  32768  World size :  16  , All reduce total time for all VMs :  tensor([[0.2021, 0.1852, 0.1668, 0.1266, 0.1427, 0.1207, 0.0806, 0.1005, 0.0746,
+         0.0663, 0.0886, 0.0582, 0.0574, 0.0624, 0.0479, 0.0557]])
+Tensor size :  65536  World size :  16  , All reduce total time for all VMs :  tensor([[0.2433, 0.2112, 0.2222, 0.1866, 0.1680, 0.0725, 0.0946, 0.1521, 0.0790,
+         0.0757, 0.0585, 0.1081, 0.0806, 0.1348, 0.0992, 0.0886]])
+Tensor size :  131072  World size :  16  , All reduce total time for all VMs :  tensor([[0.3101, 0.1284, 0.3214, 0.2441, 0.2808, 0.1981, 0.0729, 0.1765, 0.1770,
+         0.1398, 0.1571, 0.1532, 0.0947, 0.1847, 0.1803, 0.1973]])
+Tensor size :  262144  World size :  16  , All reduce total time for all VMs :  tensor([[0.3992, 0.4024, 0.4212, 0.3600, 0.4039, 0.3659, 0.2214, 0.2288, 0.3223,
+         0.1513, 0.2072, 0.3134, 0.1313, 0.2679, 0.2859, 0.2700]])
+Tensor size :  524288  World size :  16  , All reduce total time for all VMs :  tensor([[2.1015, 1.5908, 1.7313, 1.6774, 1.5453, 1.0069, 1.9994, 1.9403, 1.6828,
+         1.7500, 1.8861, 1.8705, 1.9219, 1.9713, 1.6783, 1.8423]])
+Tensor size :  1048576  World size :  16  , All reduce total time for all VMs :  tensor([[2.5589, 2.8964, 3.2544, 2.2557, 3.1314, 0.7771, 2.8958, 3.0298, 3.0412,
+         2.9432, 3.0855, 2.7427, 2.6199, 3.5161, 3.0061, 3.0165]])
+Tensor size :  2097152  World size :  16  , All reduce total time for all VMs :  tensor([[5.1613, 1.8318, 3.9060, 3.8874, 3.7349, 4.3951, 3.6484, 3.6043, 4.0849,
+         4.0985, 3.1139, 1.7572, 3.0241, 5.4220, 3.5575, 3.5040]])
+Tensor size :  4194304  World size :  16  , All reduce total time for all VMs :  tensor([[15.2177, 13.7800,  5.8242, 14.2044, 14.4203,  2.3079, 14.3284, 13.3215,
+         13.9960, 13.8128,  4.4866,  5.3447, 14.2022, 15.6436, 13.7327, 13.4957]])
+Tensor size :  8388608  World size :  16  , All reduce total time for all VMs :  tensor([[46.0873, 17.0842, 43.3600, 32.7752, 43.9776, 42.6505, 39.0498,  3.4564,
+         33.2779, 40.7681, 20.1948, 35.0419, 26.7803, 43.9169, 26.3025, 27.8013]])
+Tensor size :  16777216  World size :  16  , All reduce total time for all VMs :  tensor([[67.7035,  6.4398, 54.7345, 62.2554, 62.4042, 57.0871, 37.7819, 26.7945,
+         32.7393, 56.7842, 21.9378, 51.9787, 57.5229, 67.8258, 34.9885, 60.8672]])
+Tensor size :  33554432  World size :  16  , All reduce total time for all VMs :  tensor([[79.3969, 69.1819, 64.5903, 52.7285, 56.2686, 58.0106, 57.1967, 72.5770,
+         42.3106, 69.7899, 68.0709, 12.1213, 40.9644, 74.0276, 65.1776, 51.4626]])
+Tensor size :  67108864  World size :  16  , All reduce total time for all VMs :  tensor([[69.1367, 53.8886, 54.4843, 38.5751, 58.6823, 39.6228, 24.7093, 44.3960,
+         52.8520, 55.9942, 23.5336, 30.3793, 60.3702, 75.6445, 44.8965, 65.4018]])
+Tensor size :  104857600  World size :  16  , All reduce total time for all VMs :  tensor([[100.1558,  43.5515,  73.1461,  56.9841,  67.6724,  72.5650,  74.0688,
+          58.4478,  57.0016,  37.0478,  72.4675,  65.2063,  64.8485,  90.4269,
+          61.3846,  62.3578]])
+Tensor size :  134217728  World size :  16  , All reduce total time for all VMs :  tensor([[123.9648,  80.1355,  82.4035,  61.6944,  84.3564,  58.9768,  48.4966,
+          77.3340,  92.4842,  81.4905,  59.6420,  58.8751,  91.0706, 132.2267,
+         101.5467, 104.5605]])
