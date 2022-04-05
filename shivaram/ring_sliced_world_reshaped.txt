@@ -1,0 +1,35 @@
+[1] 13:38:58 [SUCCESS] node1
+Already up to date.
+[2] 13:38:58 [SUCCESS] node4
+Already up to date.
+[3] 13:38:58 [SUCCESS] node3
+Already up to date.
+[4] 13:38:58 [SUCCESS] node2
+Already up to date.
+[5] 13:38:58 [SUCCESS] node8
+Already up to date.
+[6] 13:38:58 [SUCCESS] node7
+Already up to date.
+[7] 13:38:58 [SUCCESS] node10
+Already up to date.
+[8] 13:38:58 [SUCCESS] node6
+Already up to date.
+[9] 13:38:58 [SUCCESS] node5
+Already up to date.
+[10] 13:38:58 [SUCCESS] node13
+Already up to date.
+[11] 13:38:58 [SUCCESS] node11
+Already up to date.
+[12] 13:38:58 [SUCCESS] node14
+Already up to date.
+[13] 13:38:58 [SUCCESS] node9
+Already up to date.
+[14] 13:38:59 [SUCCESS] node15
+Already up to date.
+[15] 13:38:59 [SUCCESS] node12
+Already up to date.
+Tensor size :  10485760  World size :  2  , All reduce total time for all VMs :  tensor([[0.9422, 2.0838]])
+Tensor size :  10485760  World size :  4  , All reduce total time for all VMs :  tensor([[3.7848, 1.2796, 2.7619, 3.3410]])
+Tensor size :  10485760  World size :  8  , All reduce total time for all VMs :  tensor([[4.8578, 2.3709, 6.8424, 5.1966, 6.5417, 5.2691, 5.1379, 5.6048]])
+Tensor size :  10485760  World size :  16  , All reduce total time for all VMs :  tensor([[8.8222, 6.1509, 7.7255, 6.6383, 6.8065, 4.4621, 6.0447, 4.0403, 8.5501,
+         6.5617, 5.1984, 5.4395, 7.7573, 9.3301, 8.8699, 7.7723]])

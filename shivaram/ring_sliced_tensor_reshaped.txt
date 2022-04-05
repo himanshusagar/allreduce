@@ -1,0 +1,159 @@
+[1] 13:20:49 [SUCCESS] node3
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[2] 13:20:49 [SUCCESS] node6
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[3] 13:20:49 [SUCCESS] node1
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[4] 13:20:49 [SUCCESS] node4
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[5] 13:20:49 [SUCCESS] node9
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[6] 13:20:49 [SUCCESS] node7
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[7] 13:20:49 [SUCCESS] node8
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[8] 13:20:49 [SUCCESS] node5
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[9] 13:20:49 [SUCCESS] node12
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[10] 13:20:49 [SUCCESS] node13
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[11] 13:20:49 [SUCCESS] node2
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[12] 13:20:49 [SUCCESS] node11
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[13] 13:20:49 [SUCCESS] node15
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[14] 13:20:49 [SUCCESS] node10
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+[15] 13:20:49 [SUCCESS] node14
+Updating 4bb586f..6205538
+Fast-forward
+ shivaram/ring_sliced_world.txt | 140 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 shivaram/ring_sliced_world.txt
+Stderr: From github.com:himanshusagar/allreduce
+   4bb586f..6205538  ring_diff_imple -> origin/ring_diff_imple
+Tensor size :  1024  World size :  16  , All reduce total time for all VMs :  tensor([[0.2052, 0.1768, 0.1798, 0.1518, 0.1377, 0.1428, 0.1130, 0.1006, 0.1042,
+         0.0960, 0.0800, 0.0770, 0.0591, 0.0680, 0.0504, 0.0466]])
+Tensor size :  2048  World size :  16  , All reduce total time for all VMs :  tensor([[0.1844, 0.1818, 0.1635, 0.1582, 0.1504, 0.1530, 0.1145, 0.0803, 0.0948,
+         0.0973, 0.0728, 0.0849, 0.0599, 0.0557, 0.0521, 0.0452]])
+Tensor size :  4096  World size :  16  , All reduce total time for all VMs :  tensor([[0.2211, 0.1953, 0.1837, 0.1392, 0.1508, 0.1543, 0.1258, 0.0970, 0.1137,
+         0.0962, 0.0958, 0.0873, 0.0458, 0.0722, 0.0534, 0.0595]])
+Tensor size :  8192  World size :  16  , All reduce total time for all VMs :  tensor([[0.2271, 0.2161, 0.2038, 0.1736, 0.1537, 0.1482, 0.1052, 0.1196, 0.1129,
+         0.1235, 0.0662, 0.0440, 0.0810, 0.0726, 0.0702, 0.0505]])
+Tensor size :  16384  World size :  16  , All reduce total time for all VMs :  tensor([[0.2094, 0.1721, 0.1888, 0.1487, 0.1202, 0.1202, 0.0471, 0.0910, 0.1074,
+         0.0869, 0.0670, 0.0738, 0.0551, 0.0618, 0.0651, 0.0507]])
+Tensor size :  32768  World size :  16  , All reduce total time for all VMs :  tensor([[0.2668, 0.1826, 0.2488, 0.1434, 0.2170, 0.0488, 0.0873, 0.1564, 0.1406,
+         0.1482, 0.1659, 0.1314, 0.1208, 0.1256, 0.1293, 0.1114]])
+Tensor size :  65536  World size :  16  , All reduce total time for all VMs :  tensor([[0.4406, 0.4137, 0.4499, 0.3810, 0.3855, 0.3526, 0.3153, 0.3376, 0.2632,
+         0.2942, 0.0617, 0.3324, 0.2694, 0.3277, 0.2956, 0.3159]])
+Tensor size :  131072  World size :  16  , All reduce total time for all VMs :  tensor([[0.0829, 0.6070, 0.6122, 0.5705, 0.5847, 0.1904, 0.4872, 0.5091, 0.4425,
+         0.4691, 0.5117, 0.4847, 0.3648, 0.5115, 0.4482, 0.5400]])
+Tensor size :  262144  World size :  16  , All reduce total time for all VMs :  tensor([[0.7553, 0.9055, 0.9124, 0.8010, 0.7815, 0.8201, 0.7512, 0.1197, 0.7540,
+         0.6585, 0.7019, 0.6861, 0.6092, 0.7455, 0.7277, 0.7003]])
+Tensor size :  524288  World size :  16  , All reduce total time for all VMs :  tensor([[0.9955, 0.7482, 0.7762, 0.8294, 0.8822, 0.7120, 0.5215, 0.6740, 0.4129,
+         0.5863, 0.5968, 0.6676, 0.7147, 0.8428, 0.6524, 0.7531]])
+Tensor size :  1048576  World size :  16  , All reduce total time for all VMs :  tensor([[1.5483, 1.3828, 1.2618, 0.9875, 1.4168, 0.9189, 0.9309, 1.0746, 0.8759,
+         1.0080, 1.0070, 0.7977, 1.3282, 1.4766, 1.0679, 0.9867]])
+Tensor size :  2097152  World size :  16  , All reduce total time for all VMs :  tensor([[4.9166, 5.8697, 5.5053, 1.9739, 5.3504, 1.4738, 5.3949, 4.0608, 6.1126,
+         5.9345, 5.4709, 4.8418, 5.3823, 6.6024, 5.7493, 5.0216]])
+Tensor size :  4194304  World size :  16  , All reduce total time for all VMs :  tensor([[15.3594, 13.6749, 14.8954,  8.6629,  7.9572, 14.2240, 14.2627, 13.4608,
+         13.7612, 14.8721, 14.8304, 14.8263,  1.7281, 16.5106,  8.8406,  7.6296]])
+Tensor size :  8388608  World size :  16  , All reduce total time for all VMs :  tensor([[42.8847, 40.4904,  3.8623, 33.9557, 39.9261, 34.5176, 40.0883, 40.9438,
+         23.9236, 40.7929, 10.6750, 35.9015, 26.4897, 37.9583, 26.2909,  3.0299]])
+Tensor size :  16777216  World size :  16  , All reduce total time for all VMs :  tensor([[58.8483,  6.0625, 55.4958, 51.7917, 49.6514, 45.9202, 53.8674, 28.2426,
+         16.5943, 54.7271, 50.0928, 37.7262, 34.3506, 58.5802, 27.2210, 46.1630]])
+Tensor size :  33554432  World size :  16  , All reduce total time for all VMs :  tensor([[55.9039, 35.7317, 51.8175, 38.0519, 45.9884, 11.1699, 32.6701, 31.1904,
+         46.1896, 42.1301, 46.6679, 52.5440, 42.2276, 56.2540, 40.4409, 51.9036]])
+Tensor size :  67108864  World size :  16  , All reduce total time for all VMs :  tensor([[70.8819, 68.9850, 61.3965, 23.3993, 60.5390, 56.6637, 63.9318, 42.6471,
+         35.6040, 73.7908, 58.9034, 40.7593, 60.8114, 82.1352, 51.6029, 76.9621]])
+Tensor size :  104857600  World size :  16  , All reduce total time for all VMs :  tensor([[83.2442, 43.5463, 49.3767, 37.6846, 82.4066, 74.9244, 37.4898, 61.1465,
+         67.1330, 53.8683, 61.9652, 38.0633, 43.6724, 92.9494, 52.6492, 48.8911]])
+Tensor size :  134217728  World size :  16  , All reduce total time for all VMs :  tensor([[143.7589,  76.5969,  93.5385,  61.7872,  91.9229,  47.7219,  66.0253,
+          76.1855,  96.7876,  88.6374,  85.9812,  71.8515,  90.6994, 155.0014,
+          98.6314, 109.7714]])
