@@ -56,8 +56,6 @@ def main():
         dist.send(t, dst=0)
 
 if __name__ == "__main__":
-    timi = [1,3,4]
-    measure(timi)
     parser = argparse.ArgumentParser()
     parser.add_argument("--master-ip", "-m", required=True, type=str)
     parser.add_argument("--num-nodes", "-n", required=True, type=int)
