@@ -1,0 +1,140 @@
+[1] 04:01:10 [SUCCESS] node9
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[2] 04:01:10 [SUCCESS] node3
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[3] 04:01:10 [SUCCESS] node1
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[4] 04:01:10 [SUCCESS] node11
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[5] 04:01:10 [SUCCESS] node2
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[6] 04:01:10 [SUCCESS] node10
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[7] 04:01:10 [SUCCESS] node4
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[8] 04:01:10 [SUCCESS] node6
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[9] 04:01:10 [SUCCESS] node8
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[10] 04:01:10 [SUCCESS] node5
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[11] 04:01:10 [SUCCESS] node7
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[12] 04:01:10 [SUCCESS] node13
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[13] 04:01:10 [SUCCESS] node14
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[14] 04:01:11 [SUCCESS] node12
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+[15] 04:01:11 [SUCCESS] node15
+Updating ae6dea2..4bb586f
+Fast-forward
+ shivaram/ring_sliced_tensor.txt | 160 ++++++++++++++++++++++++++++++++++++++++
+ shivaram/task2.sh               |   4 +-
+ 2 files changed, 162 insertions(+), 2 deletions(-)
+ create mode 100644 shivaram/ring_sliced_tensor.txt
+Stderr: From github.com:himanshusagar/allreduce
+   ae6dea2..4bb586f  ring_diff_imple -> origin/ring_diff_imple
+Tensor size :  10485760  World size :  2  , All reduce total time for all VMs :  tensor([[4.8116, 0.9055]])
+Tensor size :  10485760  World size :  4  , All reduce total time for all VMs :  tensor([[5.8242, 1.2691, 3.8342, 2.4958]])
+Tensor size :  10485760  World size :  8  , All reduce total time for all VMs :  tensor([[6.6863, 2.4822, 6.9925, 2.4148, 6.8336, 5.9798, 6.9788, 3.5358]])
+Tensor size :  10485760  World size :  16  , All reduce total time for all VMs :  tensor([[13.1442,  7.0341,  7.8045,  3.9664,  9.5500,  9.2821,  7.2746, 10.5266,
+          7.4420, 10.1012,  8.8289,  8.9634,  9.2189, 11.4208,  8.5400,  9.9368]])
