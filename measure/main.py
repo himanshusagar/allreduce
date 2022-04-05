@@ -6,7 +6,7 @@ import time
 from torch import distributed as dist
 
 DEVICE = "cpu"
-TENSOR_SIZE = 1024
+TENSOR_SIZE = 8
 import numpy as np
 
 def init_process(master_ip, rank, world_size):
@@ -38,7 +38,7 @@ def main():
     timings = [0]
     if dist.get_rank() == 0:
         # Recv tensors from all ranks in an array
-        recv_buffers = [torch.zeros(TENSOR_SIZE * dist.get_rank()) for i in range(1, dist.get_world_size())]
+        recv_buffers = [torch.zeros(TENSOR_SIZE * i) for i in range(1, dist.get_world_size())]
         for i in range(1, dist.get_world_size()):
             s = time.time()
             dist.recv(recv_buffers[i-1], src=i)
