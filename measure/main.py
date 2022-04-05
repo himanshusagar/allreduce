@@ -17,13 +17,19 @@ def init_process(master_ip, rank, world_size):
 
 def measure(timings):
     print("About to measure Alpha and Beta")
-    b = np.array([ timings[1] ])
-    A = np.array([np.array(1, TENSOR_SIZE * 1)])
+    begin = 5
+    end = 10
 
-    for i in range(2, dist.get_world_size()):
-        A = np.append( A , np.array(1, TENSOR_SIZE * i), axis = 0)
-    for i in range(2 , dist.get_world_size()):
-        np.append(b , np.array(timings[0]) )
+    b = np.array([ timings[begin] ])
+    A = np.array([np.array( [1, TENSOR_SIZE * begin ] )])
+
+    #for i in range(end, end+1):
+    entry = np.array([np.array([1, TENSOR_SIZE * end])])
+    A = np.append( A , entry , axis = 0)
+
+    #for i in range(end , end+1):
+    entry = np.array([timings[end]])
+    b = np.append(b , entry )
 
     print(np.shape(A) , np.shape(b))
     print(A)
@@ -50,6 +56,8 @@ def main():
         dist.send(t, dst=0)
 
 if __name__ == "__main__":
+    timi = [1,3,4]
+    measure(timi)
     parser = argparse.ArgumentParser()
     parser.add_argument("--master-ip", "-m", required=True, type=str)
     parser.add_argument("--num-nodes", "-n", required=True, type=int)
