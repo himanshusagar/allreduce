@@ -16,7 +16,7 @@ def init_process(master_ip, rank, world_size):
                             world_size=world_size)
 
 def measure(timings):
-
+    print("About to measure Alpha and Beta")
     b = np.array([ timings[1] ])
     A = np.array([np.array(1, TENSOR_SIZE * 1)])
 
@@ -38,7 +38,7 @@ def main():
     timings = [0]
     if dist.get_rank() == 0:
         # Recv tensors from all ranks in an array
-        recv_buffers = [torch.zeros(TENSOR_SIZE) for i in range(1, dist.get_world_size())]
+        recv_buffers = [torch.zeros(TENSOR_SIZE * dist.get_rank()) for i in range(1, dist.get_world_size())]
         for i in range(1, dist.get_world_size()):
             s = time.time()
             dist.recv(recv_buffers[i-1], src=i)
