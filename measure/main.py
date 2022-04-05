@@ -62,7 +62,10 @@ if __name__ == "__main__":
     parser.add_argument("--rank", "-r", required=True, type=int)
 
     args = parser.parse_args()
+    s = time.time()
     init_process(master_ip=args.master_ip,
                  rank=args.rank,
                  world_size=args.num_nodes)
+    e = time.time()
+    print("Finished init_process from ", dist.get_rank() , " in ", e - s, " seconds")
     main()
