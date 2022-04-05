@@ -44,7 +44,7 @@ def main():
             dist.recv(recv_buffers[i-1], src=i)
             e = time.time()
             print("Finished recv from ", i, " in ", e-s, " seconds")
-            timings.append = (e - s)
+            timings.append(e - s)
         measure(timings)
     else:
         dist.send(t, dst=0)
