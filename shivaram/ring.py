@@ -2,6 +2,7 @@ import argparse
 import torch
 import logging
 import time
+import numpy
 
 from torch import distributed as dist
 
