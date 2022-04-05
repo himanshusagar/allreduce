@@ -11,7 +11,7 @@ import numpy as np
 
 def init_process(master_ip, rank, world_size):
     dist.init_process_group(backend="gloo",
-                            init_method="tcp://" + master_ip + ":6585",
+                            init_method="tcp://" + master_ip + ":9866",
                             rank=rank,
                             world_size=world_size)
 
