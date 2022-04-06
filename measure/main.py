@@ -20,7 +20,7 @@ def measure(timings):
     avg_beta = []
 
     print("About to measure Alpha and Beta")
-    for begin in range(14):
+    for begin in range(1 , 15):
         end = begin + 1
 
         b = np.array([ timings[begin] ])
