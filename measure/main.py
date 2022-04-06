@@ -16,25 +16,33 @@ def init_process(master_ip, rank, world_size):
                             world_size=world_size)
 
 def measure(timings):
+    avg_alpha = []
+    avg_beta = []
+
     print("About to measure Alpha and Beta")
-    begin = 5
-    end = 10
+    for begin in range(14):
+        end = begin + 1
 
-    b = np.array([ timings[begin] ])
-    A = np.array([np.array( [1, TENSOR_SIZE * begin ] )])
+        b = np.array([ timings[begin] ])
+        A = np.array([np.array( [1, TENSOR_SIZE * begin ] )])
 
-    #for i in range(end, end+1):
-    entry = np.array([np.array([1, TENSOR_SIZE * end])])
-    A = np.append( A , entry , axis = 0)
+        #for i in range(end, end+1):
+        entry = np.array([np.array([1, TENSOR_SIZE * end])])
+        A = np.append( A , entry , axis = 0)
 
-    #for i in range(end , end+1):
-    entry = np.array([timings[end]])
-    b = np.append(b , entry )
+        #for i in range(end , end+1):
+        entry = np.array([timings[end]])
+        b = np.append(b , entry )
 
-    print(np.shape(A) , np.shape(b))
-    print(A)
-    print(b)
-    print( np.linalg.solve(A, b) )
+        #print(np.shape(A) , np.shape(b))
+        #print(A)
+        #print(b)
+        sol = np.linalg.solve(A, b);
+        avg_alpha.append( sol[0] );
+        avg_beta.append( sol[1] );
+    print("Final Values")
+    print(np.mean(avg_alpha))
+    print(np.mean(avg_beta))
 
 
 def main():
