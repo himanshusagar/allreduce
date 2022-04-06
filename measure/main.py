@@ -6,7 +6,7 @@ import time
 from torch import distributed as dist
 
 DEVICE = "cpu"
-TENSOR_SIZE = (1024 * 1024 * 1024)/10
+TENSOR_SIZE = int( (1024 * 1024 * 1024)/10 )
 import numpy as np
 
 def init_process(master_ip, rank, world_size):
