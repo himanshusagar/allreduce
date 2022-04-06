@@ -1,0 +1,70 @@
+[1] 22:06:30 [SUCCESS] node1
+Already up to date.
+[2] 22:06:30 [SUCCESS] node4
+Already up to date.
+[3] 22:06:30 [SUCCESS] node2
+Already up to date.
+[4] 22:06:30 [SUCCESS] node8
+Already up to date.
+[5] 22:06:30 [SUCCESS] node5
+Already up to date.
+[6] 22:06:30 [SUCCESS] node3
+Already up to date.
+[7] 22:06:30 [SUCCESS] node6
+Already up to date.
+[8] 22:06:30 [SUCCESS] node12
+Already up to date.
+[9] 22:06:30 [SUCCESS] node10
+Already up to date.
+[10] 22:06:30 [SUCCESS] node11
+Already up to date.
+[11] 22:06:30 [SUCCESS] node7
+Already up to date.
+[12] 22:06:30 [SUCCESS] node9
+Already up to date.
+[13] 22:06:31 [SUCCESS] node14
+Already up to date.
+[14] 22:06:31 [SUCCESS] node13
+Already up to date.
+[15] 22:06:31 [SUCCESS] node15
+Already up to date.
+Tensor size :  1024  World size :  16  , All reduce total time for all VMs :  tensor([[0.2094, 0.1837, 0.1643, 0.1480, 0.1486, 0.1464, 0.1249, 0.1032, 0.1062,
+         0.0890, 0.0791, 0.0769, 0.0638, 0.0655, 0.0469, 0.0467]])
+Tensor size :  2048  World size :  16  , All reduce total time for all VMs :  tensor([[0.2135, 0.1940, 0.1948, 0.1709, 0.1649, 0.1471, 0.1213, 0.1105, 0.1141,
+         0.0957, 0.0927, 0.0937, 0.0712, 0.0731, 0.0625, 0.0451]])
+Tensor size :  4096  World size :  16  , All reduce total time for all VMs :  tensor([[0.2067, 0.1753, 0.1778, 0.1437, 0.1357, 0.1370, 0.1201, 0.1017, 0.1046,
+         0.0986, 0.0811, 0.0750, 0.0607, 0.0503, 0.0535, 0.0442]])
+Tensor size :  8192  World size :  16  , All reduce total time for all VMs :  tensor([[0.2110, 0.1853, 0.1865, 0.1638, 0.1575, 0.1581, 0.0500, 0.1186, 0.1029,
+         0.1124, 0.0694, 0.0794, 0.0649, 0.0643, 0.0446, 0.0486]])
+Tensor size :  16384  World size :  16  , All reduce total time for all VMs :  tensor([[0.2288, 0.1446, 0.1967, 0.1706, 0.1675, 0.1625, 0.0980, 0.1217, 0.1228,
+         0.1140, 0.1002, 0.1068, 0.0761, 0.0837, 0.0445, 0.0740]])
+Tensor size :  32768  World size :  16  , All reduce total time for all VMs :  tensor([[0.1400, 0.0907, 0.1701, 0.1429, 0.1782, 0.1688, 0.0971, 0.1209, 0.1449,
+         0.0490, 0.0689, 0.0971, 0.0576, 0.0929, 0.0665, 0.0813]])
+Tensor size :  65536  World size :  16  , All reduce total time for all VMs :  tensor([[0.3115, 0.1481, 0.2479, 0.2172, 0.2183, 0.2268, 0.1625, 0.2081, 0.1779,
+         0.0580, 0.1631, 0.1387, 0.1257, 0.1912, 0.1504, 0.1608]])
+Tensor size :  131072  World size :  16  , All reduce total time for all VMs :  tensor([[0.3462, 0.0756, 0.3365, 0.2490, 0.3367, 0.3665, 0.2607, 0.2728, 0.2816,
+         0.2694, 0.1476, 0.2563, 0.1319, 0.2753, 0.2788, 0.2804]])
+Tensor size :  262144  World size :  16  , All reduce total time for all VMs :  tensor([[0.7574, 0.8827, 0.9465, 0.7798, 0.8118, 0.8754, 0.8150, 0.9293, 0.1386,
+         0.6903, 0.5999, 0.7231, 0.6482, 0.7397, 0.7523, 0.6887]])
+Tensor size :  524288  World size :  16  , All reduce total time for all VMs :  tensor([[1.7603, 1.4552, 1.5473, 1.6632, 1.3136, 1.5262, 1.3094, 1.3581, 1.3025,
+         1.2276, 1.5841, 1.3664, 1.4888, 1.6779, 1.5498, 1.3566]])
+Tensor size :  1048576  World size :  16  , All reduce total time for all VMs :  tensor([[1.2734, 1.9474, 1.8941, 1.5493, 1.8290, 1.7195, 1.1780, 1.7522, 1.6333,
+         1.5533, 1.6598, 1.7845, 1.5601, 2.2528, 1.7932, 1.6231]])
+Tensor size :  2097152  World size :  16  , All reduce total time for all VMs :  tensor([[5.7623, 4.4732, 4.7596, 2.2636, 4.2311, 4.9360, 5.2332, 5.0118, 4.4392,
+         1.3800, 5.0605, 3.8165, 5.0747, 6.0342, 5.1853, 4.4287]])
+Tensor size :  4194304  World size :  16  , All reduce total time for all VMs :  tensor([[31.3100, 28.5904, 24.0876,  1.8200, 29.4655, 29.3941, 28.2363, 28.9838,
+         20.9511,  2.1150, 29.1599, 29.3774, 29.3031, 30.5991, 29.0798, 28.0442]])
+Tensor size :  8388608  World size :  16  , All reduce total time for all VMs :  tensor([[41.8088,  5.4063, 31.4805, 40.4186, 36.5690, 24.6730, 40.6176, 39.6840,
+         38.6018,  3.1556, 10.7316, 21.7879, 34.8631, 43.1556, 38.9842, 32.4758]])
+Tensor size :  16777216  World size :  16  , All reduce total time for all VMs :  tensor([[38.8487, 19.1587, 39.2023, 21.9926, 30.3324, 36.3416, 42.0896, 40.2829,
+         13.7438, 39.4998, 16.0652, 35.9826, 13.2185, 46.5110, 39.8440,  5.7530]])
+Tensor size :  33554432  World size :  16  , All reduce total time for all VMs :  tensor([[54.5796, 33.4954, 41.5150, 35.3446, 40.4305, 50.7012, 31.1674, 24.3712,
+         12.8527, 29.3504, 46.7216, 29.4161, 12.2522, 56.1762, 46.2298, 40.8958]])
+Tensor size :  67108864  World size :  16  , All reduce total time for all VMs :  tensor([[78.6558, 62.5711, 50.3958, 41.4779, 29.6107, 42.2231, 52.3757, 45.9210,
+         59.5640, 36.0468, 71.7612, 23.0332, 74.9627, 77.1797, 55.1072, 53.1897]])
+Tensor size :  104857600  World size :  16  , All reduce total time for all VMs :  tensor([[111.2354,  73.9526,  94.4977,  36.3271,  79.7349,  95.9664,  52.4359,
+          93.9951,  72.3264,  85.0957, 101.5065,  76.8105, 122.9862, 139.3116,
+         113.5889,  88.7228]])
+Tensor size :  134217728  World size :  16  , All reduce total time for all VMs :  tensor([[114.8113,  92.6945, 128.4277, 103.6087,  96.5354,  86.3956,  88.7472,
+         113.2027,  86.3696,  47.7704, 132.3623,  86.7886, 122.7436, 124.1235,
+         137.8906, 108.7119]])
