@@ -40,7 +40,10 @@ def measure(timings):
         sol = np.linalg.solve(A, b);
         avg_alpha.append( sol[0] );
         avg_beta.append( sol[1] );
-    print("Final Values")
+    print("Final Values : Alpha")
+    print(avg_alpha)
+    print("Final Values : Beta")
+    print(avg_beta)
     print(np.mean(avg_alpha))
     print(np.mean(avg_beta))
 
